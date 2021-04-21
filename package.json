@@ -7,9 +7,8 @@
 		"build": "rollup -c",
 		"watch": "rollup -cw",
 		"format": "prettier --use-tabs --write src/** --write *.json --write *.js --write pages/*.js --write pages/*.jsx",
-		"next:build": "next build",
-		"next:serve": "next dev -p 9000",
-		"next:export": "next export"
+		"serve": "next dev -p 9000",
+		"site": "next build; next export"
 	},
 	"license": "Apache-2.0",
 	"licenses": [
