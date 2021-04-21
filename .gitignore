@@ -1,0 +1,6 @@
+.next
+dist-web
+dist-node
+node_modules
+out
+NOTES.md

@@ -1,0 +1,29 @@
+import Dialog from "../../src/components/Dialog";
+import { useState } from 'react'
+
+export const DialogExample = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+        <button onClick={() => setOpen(true)}>Open Dialog</button>
+        <Dialog open={open} onOpenChange={() => setOpen(false)}>
+            <div>Hello</div>
+        </Dialog>
+    </>
+  )
+}
+
+
+
+
+# Dialog
+
+<DialogExample />
+
+```jsx
+const [open, setOpen] = useState(false);
+<button onClick={() => setOpen(true)}>Open Dialog</button>
+<Dialog open={open} onOpenChange={() => setOpen(false)}>
+	<div>Hello</div>
+</Dialog>
+```
