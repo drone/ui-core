@@ -37,6 +37,26 @@ export enum AvatarSize {
 	xxlarge = "128px",
 }
 
+export interface AvatarProps {
+	className?: string;
+
+	/**
+	 * A url to load an image from.
+	 */
+	src?: string;
+
+	/**
+	 * Alt will be displayed in a tooltip and used as fallback
+	 * content if the image fails to load.
+	 */
+	alt?: string;
+
+	/**
+	 * Defines the size of the avatar.
+	 */
+	size?: string | AvatarSize;
+}
+
 const Avatar: React.FC<AvatarProps> = (props) => (
 	<RadixAvatar.Root
 		className={cx(rootCss, props.className)}
@@ -52,12 +72,5 @@ const Avatar: React.FC<AvatarProps> = (props) => (
 		</RadixAvatar.Fallback>
 	</RadixAvatar.Root>
 );
-
-export interface AvatarProps {
-	className?: string;
-	src?: string;
-	alt?: string;
-	size?: string | AvatarSize;
-}
 
 export default Avatar;

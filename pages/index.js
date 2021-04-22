@@ -9,7 +9,7 @@ export default () => {
 					<Link href="/avatar">Avatar</Link>
 				</li>
 				<li>
-					<span className="comingsoon">Avatar Group</span>
+					<Link href="/avatar/group">Avatar Group</Link>
 				</li>
 				<li>
 					<span className="comingsoon">Badge</span>
