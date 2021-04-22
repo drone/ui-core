@@ -8,13 +8,13 @@ import { css, cx } from "@emotion/css";
 const rootCss = css`
 	display: inline-flex;
 
-	span {
+	&> span {
 		border: 3px solid #ffffff;
 		box-sizing: border-box;
 		margin-left: -7px;
 	}
 
-	span:first-child {
+	&> span:first-child {
 		margin-left: 0px;
 	}
 `;
