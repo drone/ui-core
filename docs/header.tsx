@@ -9,14 +9,14 @@ import { route } from "next/dist/next-server/server/router";
 const rootCss = css`
     background-color: ${colors.gray50};
     border-bottom: 1px solid ${colors.gray100};
-    padding: 30px 80px 30px 80px;
+    padding: 50px 80px 50px 80px;
 
     h1 {
         display: block;
         font-size: 32px;
         font-weight: 500;
         margin: 10px 0px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     p {

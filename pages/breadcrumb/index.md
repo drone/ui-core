@@ -1,17 +1,17 @@
 import Breadcrumb from "../../src/components/Breadcrumb";
+import Playground from "../../docs/playground";
 
-# Breadcrumb
+# Default
 
-<Breadcrumb>
-    <a href="#">Repositories</a>
-    <a href="#">drone</a>
-    <a href="#">drone-go</a>
-</Breadcrumb>
+The default form of breadcrumbs.
 
-```jsx
-<Breadcrumb>
-    <a href="#">Repositories</a>
-    <a href="#">drone</a>
-    <a href="#">drone-go</a>
-</Breadcrumb>
-```
+<Playground
+  scope={{ Breadcrumb }}
+  code={`() => (
+    <Breadcrumb>
+        <a href="#">Repositories</a>
+        <a href="#">drone</a>
+        <a href="#">drone-go</a>
+    </Breadcrumb>
+);`}
+/>

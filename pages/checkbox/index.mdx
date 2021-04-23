@@ -1,41 +1,46 @@
 import Checkbox from "../../src/components/Checkbox";
+import Playground from "../../docs/playground";
 
-# Checkbox
+# Default
 
-<Checkbox />
+The default checkbox.
 
-```jsx
-<Checkbox />
-```
+<Playground
+  scope={{ Checkbox }}
+  code={`<Checkbox />`}
+/>
 
-## Checked
+# Checked
 
-<Checkbox checked={true} />
+The checkbox state is managed by react and is set to checked:
 
-```jsx
-<Checkbox checked={true} />
-```
+<Playground
+  scope={{ Checkbox }}
+  code={`<Checkbox checked={true} />`}
+/>
 
-## Unchecked
+# Unchecked
 
-<Checkbox checked={false} />
+The checkbox state is managed by react and is set to unchecked:
 
-```jsx
-<Checkbox checked={false} />
-```
+<Playground
+  scope={{ Checkbox }}
+  code={`<Checkbox checked={false} />`}
+/>
 
-## Disabled
 
-<Checkbox disabled={true} />
+# Disabled
 
-```jsx
-<Checkbox disabled={true} />
-```
+The checkbox is disabled:
 
-## Disabled + Checked
+<Playground
+  scope={{ Checkbox }}
+  code={`<Checkbox disabled={true} />`}
+/>
 
-<Checkbox checked={true} disabled={true} />
+The checkbox state is disabled, and the checkbox is checked:
 
-```jsx
-<Checkbox checked={true} disabled={true} />
-```
+<Playground
+  scope={{ Checkbox }}
+  code={`<Checkbox disabled={true} checked={true} />`}
+/>

@@ -25,7 +25,7 @@ const contentCss = css`
     font-size: 14px;
     line-height: 21px;
     max-width: 800px;
-    padding: 20px 80px 80px 80px; 
+    padding: 40px 80px 80px 80px; 
 `
 
 export default (props) => {

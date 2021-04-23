@@ -17,14 +17,14 @@ main h1 {
     margin-top: 60px;
 }
 
+main h1:first-of-type {
+    margin-top: 0px;
+}
+
 main h2 {
     font-weight: 500;
     font-size: 18px;
     user-select: none;
-}
-
-main {
-
 }
 
 main ul li {

@@ -13,16 +13,19 @@ export default [
         name: "Badge",
     },
     {
-        name: "Breadcrumb",
+        name: "Breadcrumbs",
         path: "/breadcrumb",
+        desc: "Breadcrumbs are a navigation system used to show a user's location in a site or app.",
     },
     {
         name: "Button",
         path: "/button",
+        desc: "A button triggers an event or action.",
     },
     {
         name: "Checkbox",
         path: "/checkbox",
+        desc: "A checkbox is an input control that allows a user to select one or more options from a number of choices.",
     },
     {
         name: "Dialog",
