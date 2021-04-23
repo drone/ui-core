@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 html,
 body {
@@ -15,6 +16,7 @@ main h1 {
     font-size: 22px;
     user-select: none;
     margin-top: 60px;
+    letter-spacing: 0.25px;
 }
 
 main h1:first-of-type {

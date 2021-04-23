@@ -4,7 +4,7 @@ import colors from "../src/shared/colors";
 export default {
   plain: {
     backgroundColor: 'transparent',
-    color: colors.red700, // ?
+    color: colors.gray800, // ?
     fontWeight: '400',
     fontStyle: 'normal',
     fontFamily: 'Roboto Mono',

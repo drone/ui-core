@@ -1,27 +1,26 @@
 import Switch from "../../src/components/Switch";
+import Playground from "../../docs/playground";
 
-# Switch
+# Default
 
-<Switch />
+The default form of a switch component:
 
-```jsx
-<Switch />
-```
+<Playground
+  scope={{ Switch }}
+  code={`<Switch />`}
+/>
 
-<Switch checked={true} />
+<Playground
+  scope={{ Switch }}
+  code={`<Switch checked={true} />`}
+/>
 
-```jsx
-<Switch checked={true} />
-```
+<Playground
+  scope={{ Switch }}
+  code={`<Switch checked={false} />`}
+/>
 
-<Switch disabled={true} />
-
-```jsx
-<Switch disabled={true} />
-```
-
-<Switch checked={true} disabled={true} />
-
-```jsx
-<Switch checked={true} disabled={true} />
-```
+<Playground
+  scope={{ Switch }}
+  code={`<Switch checked={true} disabled={true} />`}
+/>

@@ -1,17 +1,25 @@
 import Spinner from "../../src/components/Spinner";
+import Playground from "../../docs/playground";
 
-# Spinner
+# Default
 
-<Spinner />
+The default form of a spinner:
 
-```jsx
-<Spinner />
-```
+<Playground
+  scope={{ Spinner }}
+  code={`<Spinner />`}
+/>
 
-## Custom Color and Size
+The spinner with a custom color:
 
-<Spinner size="64px" color="#0092e4" />
+<Playground
+  scope={{ Spinner }}
+  code={`<Spinner size="64px" />`}
+/>
 
-```jsx
-<Spinner size="64px" color="#0092e4" />
-```
+The spinner with a custom color:
+
+<Playground
+  scope={{ Spinner }}
+  code={`<Spinner size="64px" color="#0092e4" />`}
+/>

@@ -57,6 +57,7 @@ export default [
     {
         name: "Select",
         path: "/select",
+        desc: "Select allows users to make a single selection from a list of options."
     },
     {
         name: "Select Menu",
@@ -67,11 +68,13 @@ export default [
     },
     {
         name: "Spinner",
-        path: "/snipper",
+        path: "/spinner",
+        desc: "A spinner is an animated spinning icon that lets users know content is being loaded."
     },
     {
         name: "Switch",
         path: "/switch",
+        desc: "A switch is used to view or toggle between on or off states."
     },
     {
         name: "Tabs",

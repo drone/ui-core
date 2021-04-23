@@ -1,0 +1,32 @@
+import Select from "../../src/components/Select";
+import Playground from "../../docs/playground";
+
+# Default
+
+The default select component:
+
+<Playground
+  scope={{ Select }}
+  code={`() => (
+  <Select>
+    <option>Apple</option>
+    <option>Banana</option>
+    <option>Orange</option>
+  </Select>
+);`}
+/>
+
+# Disabled
+
+A disabled select component:
+
+<Playground
+  scope={{ Select }}
+  code={`() => (
+  <Select disabled={true}>
+    <option>Apple</option>
+    <option>Banana</option>
+    <option>Orange</option>
+  </Select>
+);`}
+/>
