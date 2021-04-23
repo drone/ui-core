@@ -16,6 +16,7 @@ const rootCss = css`
 
 const logoCss = css`
     cursor: pointer;
+    outline: none;
     text-decoration: none;
     user-select: none;
 
