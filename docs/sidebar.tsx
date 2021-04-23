@@ -2,6 +2,7 @@ import { css, cx } from "@emotion/css";
 import colors from "../src/shared/colors";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import routes from "./routes";
 
 const rootCss = css`
     grid-area: sidebar;
@@ -56,99 +57,6 @@ const linkCss = css`
         border-left: 4px solid ${colors.primary7};
     }
 `
-
-const routes = [
-    {
-        name: "Avatar",
-        path: "/avatar",
-    },
-    {
-        name: "Avatar Group",
-        path: "/avatar/group",
-    },
-    {
-        name: "Badge",
-    },
-    {
-        name: "Breadcrumb",
-        path: "/breadcrumb",
-    },
-    {
-        name: "Button",
-        path: "/button",
-    },
-    {
-        name: "Checkbox",
-        path: "/checkbox",
-    },
-    {
-        name: "Dialog",
-        path: "/dialog",
-    },
-    {
-        name: "Drawer",
-    },
-    {
-        name: "Input",
-        path: "/input",
-    },
-    {
-        name: "Menu",
-    },
-    {
-        name: "Message",
-        path: "/message",
-    },
-    {
-        name: "Popover",
-    },
-    {
-        name: "Prompt",
-    },
-    {
-        name: "Radio",
-    },
-    {
-        name: "Select",
-        path: "/select",
-    },
-    {
-        name: "Select Menu",
-    },
-    {
-        name: "Snippet",
-        path: "/snippet",
-    },
-    {
-        name: "Spinner",
-        path: "/snipper",
-    },
-    {
-        name: "Switch",
-        path: "/switch",
-    },
-    {
-        name: "Tabs",
-    },
-    {
-        name: "Textarea",
-        path: "/textarea",
-    },
-    {
-        name: "Toaster",
-    },
-    {
-        name: "Toggle",
-        path: "/toggle",
-    },
-    {
-        name: "Toggle Group",
-    },
-    {
-        name: "Tooltip",
-        path: "/tooltip",
-    }
-]
 
 export default () => {
     const router = useRouter();

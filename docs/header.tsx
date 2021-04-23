@@ -1,7 +1,10 @@
 import { css } from "@emotion/css";
+import { useRouter } from "next/router";
 import colors from "../src/shared/colors";
 import Link from "next/link";
 import Harness from "../src/assets/logos/HarnessLarge";
+import routes from "./routes";
+import { route } from "next/dist/next-server/server/router";
 
 const rootCss = css`
     background-color: ${colors.gray50};
@@ -22,17 +25,21 @@ const rootCss = css`
         font-size: 16px;
         font-weight: 400;
         line-height: 22px;
-        max-width: 600px;
+        max-width: 800px;
         padding: 0px;
         margin: 0px;
     }
 `
 
 export default () => {
+    const router = useRouter();
+    const selected = routes.find(route => {
+        return router.pathname === route.path;
+    })
 	return (
 		<header className={rootCss}>
-            <h1>Logo</h1>
-            <p>A logo is a visual representation of a brand or product. It can be a word or an image, or a combination of both.</p>
+            <h1>{selected?.name}</h1>
+            <p>{selected?.desc}</p>
 		</header>
 	)
 }
