@@ -1,32 +1,28 @@
 import Avatar, {AvatarSize} from "../../src/components/Avatar";
 import AvatarGroup from "../../src/components/AvatarGroup";
+import Playground from "../../docs/playground";
 
-# Avatar Group
 
-<AvatarGroup>
-    <Avatar src="/avatar.webp" />
-    <Avatar src="/avatar.webp" />
-    <Avatar src="/avatar.webp" />
-</AvatarGroup>
+<Playground
+  scope={{ AvatarGroup, Avatar }}
+  code={`() => (
+    <AvatarGroup>
+        <Avatar src="/avatar.webp" />
+        <Avatar src="/avatar.webp" />
+        <Avatar src="/avatar.webp" />
+    </AvatarGroup>
+);`}
+/>
 
-```jsx
-<AvatarGroup>
-    <Avatar src="/avatar.webp" />
-    <Avatar src="/avatar.webp" />
-    <Avatar src="/avatar.webp" />
-</AvatarGroup>
-```
 
-<AvatarGroup>
-    <Avatar src="/avatar.webp" size={48} />
-    <Avatar src="/avatar.webp" size={48} />
-    <Avatar src="/avatar.webp" size={48} />
-</AvatarGroup>
+<Playground
+  scope={{ AvatarGroup, Avatar }}
+  code={`() => (
+    <AvatarGroup>
+        <Avatar src="/avatar.webp" size={48} />
+        <Avatar src="/avatar.webp" size={48} />
+        <Avatar src="/avatar.webp" size={48} />
+    </AvatarGroup>
+);`}
+/>
 
-```jsx
-<AvatarGroup>
-    <Avatar src="/avatar.webp" size={48} />
-    <Avatar src="/avatar.webp" size={48} />
-    <Avatar src="/avatar.webp" size={48} />
-</AvatarGroup>
-```

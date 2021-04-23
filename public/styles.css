@@ -10,20 +10,11 @@ body {
     height: 100vh;
 }
 
-.logo {
-    cursor: pointer;
-    text-decoration: none;
-    user-select: none;
-}
-
-.logo svg {
-    height: 36px;
-}
-
 main h1 {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
     user-select: none;
+    margin-top: 60px;
 }
 
 main h2 {
@@ -33,13 +24,7 @@ main h2 {
 }
 
 main {
-    padding: 60px; 
-    margin: 0px auto;
-    max-width: 800px;
-}
 
-main h1 {
-    margin-top: 36px;
 }
 
 main ul li {
@@ -65,13 +50,4 @@ main ul a:visited {
     background: #F3F3FA;
     color: #9293AB;
     padding: 2px 5px;
-}
-
-.prism-code {
-    border: 1px solid #D9DAE5;
-    border-radius: 3px;
-    background: #FAFBFC !important;
-    font-family: "Roboto Mono";
-    font-size: 13px;
-    font-weight: 400;
 }

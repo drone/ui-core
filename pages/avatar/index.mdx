@@ -1,62 +1,46 @@
 import Avatar, {AvatarSize} from "../../src/components/Avatar";
+import Playground from "../../docs/playground";
 
-# Avatars
+# Default
 
+The avatar component displays the image by default:
 
-## Image
+<Playground
+  scope={{ Avatar }}
+  code={`<Avatar src="/avatar.webp" alt="Jason Smith" />`}
+/>
 
-<Avatar src="/avatar.webp" alt="Jason Smith" />
+# Fallback
 
-```jsx
-<Avatar src="/avatar.webp" alt="Jason Smith" />
-```
+If the image is not specified or cannot be loaded, the avatar component can fallback and display a textual representation.
+<Playground
+  scope={{ Avatar }}
+  code={`<Avatar alt="Jason Smith" />`}
+/>
 
-## Fallback
+# Size
 
-<Avatar alt="Jason Smith" />
+Use the size attribute and the size enumeration to change the avatar size.
 
-```jsx
-<Avatar alt="Jason Smith" />
-```
+<Playground
+  scope={{ Avatar, AvatarSize }}
+  code={`() => (
+    <>
+        <Avatar src="/avatar.webp" size={AvatarSize.tiny} />
+        <Avatar src="/avatar.webp" size={AvatarSize.small} />
+        <Avatar src="/avatar.webp" size={AvatarSize.medium} />
+        <Avatar src="/avatar.webp" size={AvatarSize.large} />
+        <Avatar src="/avatar.webp" size={AvatarSize.xlarge} />
+        <Avatar src="/avatar.webp" size={AvatarSize.xxlarge} /> 
+    </>
+);`}
+/>
 
-## Custom Size
+# Custom Size
 
-<Avatar alt="Jason Smith" size={54} />
+Use the size attribute to set a custom avatar size.
 
-```jsx
-<Avatar alt="Jason Smith" size={54} />
-```
-
-## Standard Sizes
-
-<Avatar src="/avatar.webp" size={AvatarSize.tiny} />
-<Avatar src="/avatar.webp" size={AvatarSize.small} />
-<Avatar src="/avatar.webp" size={AvatarSize.medium} />
-<Avatar src="/avatar.webp" size={AvatarSize.large} />
-<Avatar src="/avatar.webp" size={AvatarSize.xlarge} />
-<Avatar src="/avatar.webp" size={AvatarSize.xxlarge} />
-
-```jsx
-<Avatar src="/avatar.webp" size={AvatarSize.tiny} />
-<Avatar src="/avatar.webp" size={AvatarSize.small} />
-<Avatar src="/avatar.webp" size={AvatarSize.medium} />
-<Avatar src="/avatar.webp" size={AvatarSize.large} />
-<Avatar src="/avatar.webp" size={AvatarSize.xlarge} />
-<Avatar src="/avatar.webp" size={AvatarSize.xxlarge} />
-```
-
-<Avatar alt="Jason Smith" size={AvatarSize.tiny} />
-<Avatar alt="Jason Smith" size={AvatarSize.small} />
-<Avatar alt="Jason Smith" size={AvatarSize.medium} />
-<Avatar alt="Jason Smith" size={AvatarSize.large} />
-<Avatar alt="Jason Smith" size={AvatarSize.xlarge} />
-<Avatar alt="Jason Smith" size={AvatarSize.xxlarge} />
-
-```jsx
-<Avatar alt="Jason Smith" size={AvatarSize.tiny} />
-<Avatar alt="Jason Smith" size={AvatarSize.small} />
-<Avatar alt="Jason Smith" size={AvatarSize.medium} />
-<Avatar alt="Jason Smith" size={AvatarSize.large} />
-<Avatar alt="Jason Smith" size={AvatarSize.xlarge} />
-<Avatar alt="Jason Smith" size={AvatarSize.xxlarge} />
-```
+<Playground
+  scope={{ Avatar }}
+  code={`<Avatar src="/avatar.webp" alt="Jason Smith" size={54} />`}
+/>
