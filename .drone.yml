@@ -1,0 +1,26 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: build
+  image: node
+  commands:
+  - npm install
+  - npm run site
+
+- name: publish
+  image: plugins/netlify
+  settings:
+    path: ./out
+    prod: true
+    site:
+      from_secret: netlify_site_id
+    token:
+      from_secret: netlify_token
+  when:
+    event:
+    - push
+    branch:
+    - master
+
