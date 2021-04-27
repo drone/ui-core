@@ -2,7 +2,7 @@ import { css, cx } from "@emotion/css";
 import colors from "../src/shared/colors";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import routes, { samples } from "./routes";
+import routes, { samples, foundation } from "./routes";
 
 const rootCss = css`
     grid-area: sidebar;
@@ -78,6 +78,11 @@ export default () => {
 
             <h2>Samples</h2>
             {samples.map(route => (
+                <ActiveLink name={route.name} path={route.path} active={route.path === router.pathname} />
+            ))}
+
+            <h2>Foundation</h2>
+            {foundation.map(route => (
                 <ActiveLink name={route.name} path={route.path} active={route.path === router.pathname} />
             ))}
 		</aside>

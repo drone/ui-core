@@ -1,0 +1,38 @@
+import { css } from '@emotion/css'
+import colors from "../../../src/shared/colors";
+import typography from "../../../src/shared/typography";
+import Playground from "../../../docs/playground";
+const rootCss = css`
+    li {
+      list-style: none;
+      border-bottom: 1px solid ${colors.gray200};
+      padding: 2%;
+      &:hover {
+        background-color: ${colors.primary1};
+      }
+      div {
+        &:first-child {
+        }
+      }
+    }
+`;
+
+# Typography
+
+#### import typography from "/src/shared/typography";
+
+<Playground
+  scope={{ typography, rootCss }}
+  code={`
+    <ul className={rootCss}>
+      {
+        Object.entries(typography).map(entry => (
+          <li>
+            <div className={entry[1]}>typography.{entry[0]}</div>
+          </li>
+        ))
+      }
+    </ul>
+  `}
+/>
+

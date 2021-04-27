@@ -1,4 +1,4 @@
-export default {
+const colors =  {
 	//
 	// PRIMARY
 	//
@@ -33,6 +33,7 @@ export default {
 	gray700: "#383946",
 	gray800: "#22222A",
 	gray900: "#0B0B0D",
+	black: "#000000",
 
 	//
 	// PRIMARY
@@ -138,15 +139,74 @@ export default {
 	purple800: "#4D278F",
 	purple900: "#4D0B8F",
 
-	// Magneta
-	magneta50: "#FFF3F9",
-	magneta100: "#FFEEF7",
-	magneta200: "#FFCDE4",
-	magneta300: "#FFABD3",
-	magneta400: "#FF8AC1",
-	magneta500: "#FF479F",
-	magneta600: "#F53693",
-	magneta700: "#EE2A89",
-	magneta800: "#D91F79",
-	magneta900: "#CA136C",
+	// Magenta
+	magenta50: "#FFF3F9",
+	magenta100: "#FFEEF7",
+	magenta200: "#FFCDE4",
+	magenta300: "#FFABD3",
+	magenta400: "#FF8AC1",
+	magenta500: "#FF479F",
+	magenta600: "#F53693",
+	magenta700: "#EE2A89",
+	magenta800: "#D91F79",
+	magenta900: "#CA136C",
 };
+
+
+/* ================================== *
+ * ===== Style Variable Aliases ===== *
+ * ================================== */
+const aliases = {
+	/* ----- Colors ----- */
+	white: colors.gray0,
+	gray: colors.gray500,
+	grayBg: colors.gray50,
+	primaryDarker: colors.primary9,
+	primaryMain: colors.primary7,
+	primary: colors.primary7,
+	primaryBrand: colors.primary5,
+	primaryLighter: colors.primary3,
+	green: colors.green500,
+	greenBg: colors.green50,
+	blue: colors.blue500,
+	blueBg: colors.blue50,
+	yellow: colors.yellow500,
+	yellowBg: colors.yellow50,
+	red: colors.red500,
+	redBg: colors.red50,
+	teal: colors.teal500,
+	tealBg: colors.teal50,
+	lime: colors.lime500,
+	limeBg: colors.lime50,
+	purple: colors.purple500,
+	purpleBg: colors.purple50,
+	magenta: colors.magenta500,
+	magentaBg: colors.magenta50,
+  
+	darkShadowColor: 'rgb(0 0 0 / 16%)',
+	lightShadowColor: 'rgb(255 255 255 / 16%)',
+  
+	/* page and panel colors @2021-04-27 */
+	formBg: '#f8fcff',
+	formSectionBg: 'transparent',
+	formPanelBg: colors.gray0,
+	formSubsectionBg: colors.gray0,
+  
+	/* state colors @2021-04-27 */
+	error: colors.red600,
+	warning: colors.orange600,
+	success: colors.green600,
+  
+	/* form colors @2021-04-27 */
+	formActiveTab: colors.primary7,
+	formPrimaryButtonBg: colors.primary7,
+	formActivePanelIndicator: colors.primary7,
+	formHeaderText: colors.black,
+	formBodyText: colors.black,
+	formInputText: colors.black,
+	formPlaceholderText: colors.gray400,
+	formLabel: colors.gray600,
+	formFieldBorder: '#dedfe9',
+}
+
+export default {...colors, ...aliases};
