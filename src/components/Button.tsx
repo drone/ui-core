@@ -6,7 +6,7 @@ import colors from "../shared/colors";
 const rootCss = css`
 	box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04),
 		0px 2px 4px rgba(96, 97, 112, 0.16);
-	border-radius: 8px;
+	border-radius: 4px;
 	height: 40px;
 	color: #fff;
 	border: none;

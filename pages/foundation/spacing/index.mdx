@@ -1,7 +1,9 @@
 import { css } from '@emotion/css'
 import colors from "../../../src/shared/colors";
 import spacing from "../../../src/shared/spacing";
+import typography from "../../../src/shared/typography";
 import Playground from "../../../docs/playground";
+import Button from "../../../src/components/Button";
 const rootCss = css`
     li {
       list-style: none;
@@ -17,6 +19,36 @@ const rootCss = css`
         }
       }
     }
+`;
+const formCss = css`
+  width: 100%;
+  .form {
+    border-radius: 4px;
+    border: 1px solid ${colors.gray200};
+    background-color: ${colors.formBg};
+    padding: ${spacing.paddingForm};
+  }
+  .section-header {
+    color: ${colors.black};
+    ${typography.h5}
+  }
+  .form-section {
+    padding: ${spacing.paddingSection};
+    margin: ${spacing.marginSection};
+    background-color: ${colors.formSectionBg};
+  }
+  .form-subsection {
+    padding: ${spacing.paddingSubsection};
+    margin: ${spacing.marginSubsection};
+    background-color: ${colors.formSubsectionBg};
+  }
+  .subsection-header {
+    color: ${colors.black};
+    ${typography.h6};
+  }
+  .form-action-buttons {
+    margin: ${spacing.marginActionButtons};
+  }
 `;
 
 # Spacing
@@ -40,3 +72,49 @@ const rootCss = css`
   `}
 />
 
+# Form Layout
+
+<Playground
+  scope={{ formCss, Button }}
+  code={`
+    <div className={formCss}>
+      {
+      <div className="form">
+        <div className="section-header">
+          Section Header
+        </div>
+        <div className="form-section" >
+          <div className="form-subsection" >
+            <div className="subsection-header">
+              Sub-Section Header
+            </div>
+          </div>
+          <div className="form-subsection" >
+            <div className="subsection-header">
+              Sub-Section Header
+            </div>
+          </div>
+        </div>
+        <div className="section-header">
+          Section Header
+        </div>
+        <div className="form-section" >
+          <div className="form-subsection" >
+            <div className="subsection-header">
+              Sub-Section Header
+            </div>
+          </div>
+          <div className="form-subsection" >
+            <div className="subsection-header">
+              Sub-Section Header
+            </div>
+          </div>
+        </div>
+        <div className="form-action-buttons" >
+          <Button>Button</Button>
+        </div>
+      </div>
+      }
+    </div>
+  `}
+/>
