@@ -34,7 +34,7 @@ export default {
     {
       types: ['property', 'function'],
       style: {
-        color: colors.magneta900,
+        color: colors.magenta900,
       },
     },
     {
@@ -46,7 +46,7 @@ export default {
     {
       types: ['attr-name'],
       style: {
-        color: colors.magneta900,
+        color: colors.magenta900,
       },
     },
     {

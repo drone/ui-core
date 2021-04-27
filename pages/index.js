@@ -94,6 +94,18 @@ export default () => {
 					<Link href="/samples/register">Register</Link>
 				</li>
 			</ul>
+			<h1>Foundation</h1>
+			<ul>
+				<li>
+					<Link href="/foundation/colors">Colors</Link>
+				</li>
+				<li>
+					<Link href="/foundation/spacing">Spacing</Link>
+				</li>
+				<li>
+					<Link href="/foundation/typography">Typography</Link>
+				</li>
+			</ul>
 		</>
 	);
 };

@@ -1,0 +1,42 @@
+import { css } from '@emotion/css'
+import colors from "../../../src/shared/colors";
+import spacing from "../../../src/shared/spacing";
+import Playground from "../../../docs/playground";
+const rootCss = css`
+    li {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 12px 240px 200px;
+      border-bottom: 1px solid ${colors.gray200};
+      padding: 4px 0;
+      &:hover {
+        background-color: ${colors.primary1};
+      }
+      div {
+        &:first-child {
+        }
+      }
+    }
+`;
+
+# Spacing
+
+#### import colors from "/src/shared/spacing";
+
+<Playground
+  scope={{ spacing, rootCss }}
+  code={`
+    <ul className={rootCss}>
+      {
+        Object.entries(spacing).map(entry => (
+          <li>
+            <div style={{ backgroundColor: entry[1] }}></div>
+            <div>spacing.{entry[0]}</div>
+            <div>{entry[1]}</div>
+          </li>
+        ))
+      }
+    </ul>
+  `}
+/>
+

@@ -1,0 +1,46 @@
+import { css } from '@emotion/css'
+import colors from "../../../src/shared/colors";
+import Playground from "../../../docs/playground";
+const rootCss = css`
+    li {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 32px 240px 200px;
+      border-bottom: 1px solid ${colors.gray200};
+      padding: 4px 0;
+      &:hover {
+        background-color: ${colors.primary1};
+      }
+      div {
+        &:first-child {
+          width: 24px;
+          height: 24px;
+          overflow: hidden;
+          border-radius: 25%;
+          border: 1px solid ${colors.gray200};
+        }
+      }
+    }
+`;
+
+# Colors
+
+#### import colors from "/src/shared/colors";
+
+<Playground
+  scope={{ colors, rootCss }}
+  code={`
+    <ul className={rootCss}>
+      {
+        Object.entries(colors).map(entry => (
+          <li>
+            <div style={{ backgroundColor: entry[1] }}></div>
+            <div>colors.{entry[0]}</div>
+            <div>{entry[1]}</div>
+          </li>
+        ))
+      }
+    </ul>
+  `}
+/>
+

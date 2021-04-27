@@ -114,3 +114,18 @@ export const samples = [
         path: "/samples/register",
     },
 ];
+
+export const foundation = [
+    {
+        name: "Colors",
+        path: "/foundation/colors",
+    },
+    {
+        name: "Spacing",
+        path: "/foundation/spacing",
+    },
+    {
+        name: "Typograpy",
+        path: "/foundation/typography",
+    },
+];
