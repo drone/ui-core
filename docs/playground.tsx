@@ -26,6 +26,7 @@ const previewCss = css`
 
 	&> div {
 		display: inline-flex;
+		width: 100%;
 	}
 
 	&> div > * {

@@ -31,14 +31,14 @@ const rootCss = css`
 
 export default React.forwardRef((props, ref) => (
 	<select
-		className={cx(rootCss, props.className)}
 		ref={ref}
 		onClick={props.onClick}
 		onChange={props.onChange}
 		onMouseEnter={props.onMouseEnter}
 		onMouseLeave={props.onMouseLeave}
 		disabled={props.disabled}
-		style={{ width: props.width || "350px" }}
+		style={{ width: props.width || "100%" }}
+		className={cx(rootCss, props.className)}
 	>
 		{props.children}
 	</select>

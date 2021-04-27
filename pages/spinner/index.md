@@ -10,12 +10,16 @@ The default form of a spinner:
   code={`<Spinner />`}
 />
 
-The spinner with a custom color:
+# Size
+
+The spinner with a custom size:
 
 <Playground
   scope={{ Spinner }}
   code={`<Spinner size="64px" />`}
 />
+
+# Color
 
 The spinner with a custom color:
 

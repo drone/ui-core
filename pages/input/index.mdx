@@ -1,19 +1,27 @@
 import Input from "../../src/components/Input";
+import Playground from "../../docs/playground";
 
-# Input
+# Default
 
-<Input placeholder="username" />
+The default form of a text field.
 
-<br/><br/>
+<Playground
+  scope={{ Input }}
+  code={`<Input placeholder="Username" />`}
+/>
 
-<Input placeholder="password" />
+Use the type attribute to change the input type:
 
-<br/><br/>
+<Playground
+  scope={{ Input }}
+  code={`<Input placeholder="Password" type="password" />`}
+/>
 
-<Input disabled={true} />
+# Disabled
 
-```jsx
-<Input placeholder="username" />
-<Input placeholder="password" />
-<Input disabled={true} />
-```
+Use the disabled attribute to disable the input:
+
+<Playground
+  scope={{ Input }}
+  code={`<Input placeholder="Username" disabled={true} />`}
+/>

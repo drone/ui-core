@@ -2,6 +2,10 @@ import Avatar, {AvatarSize} from "../../src/components/Avatar";
 import AvatarGroup from "../../src/components/AvatarGroup";
 import Playground from "../../docs/playground";
 
+# Default
+
+The default avatar group component:
+
 <Playground
   scope={{ AvatarGroup, Avatar }}
   code={`() => {
@@ -17,6 +21,10 @@ import Playground from "../../docs/playground";
 };`}
 />
 
+# Size
+
+The avatar group with a custom avatar size:
+
 <Playground
   scope={{ AvatarGroup, Avatar }}
   code={`() => {
@@ -30,6 +38,10 @@ import Playground from "../../docs/playground";
   return <AvatarGroup data={data} size={48} />
 };`}
 />
+
+# Max count
+
+The maximum number of avatars allowed in the list can be customized.
 
 <Playground
   scope={{ AvatarGroup, Avatar }}

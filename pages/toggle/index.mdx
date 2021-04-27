@@ -2,6 +2,10 @@ import Toggle, {ToggleItem} from "../../src/components/Toggle";
 import Playground from "../../docs/playground";
 import { useState } from "react";
 
+# Default
+
+The default toggle comonent:
+
 <Playground
   scope={{ Toggle, ToggleItem }}
   code={`() => (
@@ -11,6 +15,8 @@ import { useState } from "react";
     </Toggle>
 );`}
 />
+
+The toggle component can be used to toggle between multiple items:
 
 <Playground
   scope={{ Toggle, ToggleItem, useState }}

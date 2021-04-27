@@ -1,5 +1,6 @@
 import Switch from "../../src/components/Switch";
 import Playground from "../../docs/playground";
+import { useState } from "react";
 
 # Default
 
@@ -10,15 +11,41 @@ The default form of a switch component:
   code={`<Switch />`}
 />
 
+# Checked
+
+The switch state is managed by react and is set to true:
+
 <Playground
-  scope={{ Switch }}
-  code={`<Switch checked={true} />`}
+  scope={{ Switch, useState }}
+  code={`() => {
+    const [ checked, setChecked ] = useState(true);
+    return <Switch onCheckedChange={() => setChecked(!checked)} checked={checked} />
+};`}
 />
+
+
+# Unchecked
+
+The switch state is managed by react and is set to false:
+
+<Playground
+  scope={{ Switch, useState }}
+  code={`() => {
+    const [ checked, setChecked ] = useState(false);
+    return <Switch onCheckedChange={() => setChecked(!checked)} checked={checked} />
+};`}
+/>
+
+# Disabled
+
+The switch is disabled:
 
 <Playground
   scope={{ Switch }}
-  code={`<Switch checked={false} />`}
+  code={`<Switch checked={false} disabled={true} />`}
 />
+
+The switch is disabled and the state is set to true;
 
 <Playground
   scope={{ Switch }}

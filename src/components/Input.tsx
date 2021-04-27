@@ -2,6 +2,7 @@
 
 import React from "react";
 import { css, cx } from "@emotion/css";
+import colors from "../shared/colors";
 
 const rootCss = css`
 	appearance: none;
@@ -10,12 +11,17 @@ const rootCss = css`
 	border-radius: 3px;
 	background-color: #ffffff;
 	font-family: Inter;
-	padding: 8px 12px;
+	padding: 10px 12px;
+	width: 100%;
 	outline: none;
 
 	&[disabled] {
 		background-color: #f9fafb;
 		cursor: not-allowed;
+
+		&::placeholder {
+			color: ${colors.gray300};
+		}
 	}
 
 	&:focus {
@@ -24,7 +30,7 @@ const rootCss = css`
 	}
 
 	&::placeholder {
-		color: #9ca3af;
+		color: ${colors.gray400};
 	}
 `;
 

@@ -37,6 +37,7 @@ export default [
     {
         name: "Input",
         path: "/input",
+        desc: "An input is an text field that allows a user to write or edit text."
     },
     {
         name: "Menu",
