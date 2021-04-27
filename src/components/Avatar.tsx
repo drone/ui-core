@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from "react";
 import { css, cx } from "@emotion/css";
 import colors from "../shared/colors";
@@ -13,8 +15,8 @@ const rootCss = css`
 
 const imageCss = css`
 	flex: 1 1 auto;
-	width: inherit;
-	height: inherit;
+	width: 100%;
+	height:  100%;
 `;
 
 const fallbackCss = css`
@@ -27,6 +29,10 @@ const fallbackCss = css`
 	align-items: center;
 	justify-content: center;
 `;
+
+const squareCss = css`
+	border-radius: 3px;
+`
 
 export enum AvatarSize {
 	tiny = "16px",
@@ -55,18 +61,28 @@ export interface AvatarProps {
 	 * Defines the size of the avatar.
 	 */
 	size?: string | AvatarSize;
+
+	/**
+	 * Defines the appearance of the avatar.
+	 */
+	appearance?: "circle" | "square";
 }
 
 const Avatar: React.FC<AvatarProps> = (props) => (
 	<RadixAvatar.Root
-		className={cx(rootCss, props.className)}
-		style={{ width: props.size || "32px", height: props.size || "32px" }}
+		className={cx(rootCss, props.className, {
+			[squareCss]: props.appearance == "square",
+		})}
+		style={{
+			width: props.size || "32px",
+			height: props.size || "32px",
+		}}
 	>
 		<RadixAvatar.Image className={imageCss} src={props.src} alt={props.alt} />
 		<RadixAvatar.Fallback className={fallbackCss} delayMs={props.src ? 500 : 0}>
 			<svg width="100%" height="100%" viewBox="0 0 75 75">
 				<text x="22" y="57" fontSize="50" fill="#FFFFFF">
-					{props.alt?.charAt(0)}
+					{props.alt?.charAt(0)?.toUpperCase()}
 				</text>
 			</svg>
 		</RadixAvatar.Fallback>

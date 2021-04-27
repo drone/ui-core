@@ -41,6 +41,7 @@ const rootCss = css`
 
 	&[disabled] {
 		cursor: not-allowed;
+		background: ${colors.gray100};
 		box-shadow: inset 0 0 0 1px #f3f4f6;
 	}
 

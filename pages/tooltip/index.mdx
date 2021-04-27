@@ -1,13 +1,17 @@
+import Button from "../../src/components/Button";
 import Tooltip from "../../src/components/Tooltip";
+import Playground from "../../docs/playground";
 
-# Tooltip
+# Default
 
-<Tooltip content="popover">
-	<button>Hover</button>
-</Tooltip>
+The default form of a tooltip.
 
-```jsx
-<Tooltip content="popover">
-	<button>Hover</button>
-</Tooltip>
-```
+
+<Playground
+  scope={{ Tooltip, Button }}
+  code={`() => (
+    <Tooltip content="popover">
+        <Button>Hover over me</Button>
+    </Tooltip>
+);`}
+/>

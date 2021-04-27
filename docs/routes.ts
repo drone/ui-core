@@ -98,3 +98,18 @@ export default [
         path: "/tooltip",
     }
 ];
+
+export const samples = [
+    {
+        name: "Application Shell",
+        path: "/samples/shell",
+    },
+    {
+        name: "Login",
+        path: "/samples/login",
+    },
+    {
+        name: "Register",
+        path: "/samples/register",
+    },
+];

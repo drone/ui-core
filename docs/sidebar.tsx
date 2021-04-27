@@ -2,22 +2,30 @@ import { css, cx } from "@emotion/css";
 import colors from "../src/shared/colors";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import routes from "./routes";
+import routes, { samples } from "./routes";
 
 const rootCss = css`
     grid-area: sidebar;
 
     border-right: 1px solid ${colors.gray200};
     box-sizing: border-box;
-    padding: 30px 0px;
+    padding: 30px 0px 60px 0px;
 
     h2 {
+        border-top: 1px solid ${colors.gray100};
         text-transform: uppercase;
         font-size: 12px;
         font-weight: 600;
         letter-spacing: 1px;
-        padding: 0px 32px;
         user-select: none;
+        margin: 24px 0px 12px 0px;
+        padding: 30px 12px 0px 36px;
+
+        &:first-of-type {
+            margin-top: 10px;
+            border-top: 0px;
+            padding-top: 0px;
+        }
     }
 `
 
@@ -65,6 +73,11 @@ export default () => {
 		<aside className={rootCss}>
             <h2>Components</h2>
             {routes.map(route => (
+                <ActiveLink name={route.name} path={route.path} active={route.path === router.pathname} />
+            ))}
+
+            <h2>Samples</h2>
+            {samples.map(route => (
                 <ActiveLink name={route.name} path={route.path} active={route.path === router.pathname} />
             ))}
 		</aside>

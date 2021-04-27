@@ -28,7 +28,7 @@ export default {
       types: ['tag', 'operator', 'number'],
       style: {
         color: colors.primary7,
-        fontWeight: 'bold'
+        fontWeight: '500'
       },
     },
     {

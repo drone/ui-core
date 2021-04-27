@@ -1,9 +1,10 @@
 import Checkbox from "../../src/components/Checkbox";
 import Playground from "../../docs/playground";
+import { useState } from "react";
 
 # Default
 
-The default checkbox.
+By default, a checkbox input includes a selected and unselected state.
 
 <Playground
   scope={{ Checkbox }}
@@ -15,8 +16,11 @@ The default checkbox.
 The checkbox state is managed by react and is set to checked:
 
 <Playground
-  scope={{ Checkbox }}
-  code={`<Checkbox checked={true} />`}
+  scope={{ Checkbox, useState }}
+  code={`() => {
+    const [ checked, setChecked ] = useState(true);
+    return <Checkbox onCheckedChange={() => setChecked(!checked)} checked={checked} />
+};`}
 />
 
 # Unchecked
@@ -24,8 +28,11 @@ The checkbox state is managed by react and is set to checked:
 The checkbox state is managed by react and is set to unchecked:
 
 <Playground
-  scope={{ Checkbox }}
-  code={`<Checkbox checked={false} />`}
+  scope={{ Checkbox, useState }}
+  code={`() => {
+    const [ checked, setChecked ] = useState(false);
+    return <Checkbox onCheckedChange={() => setChecked(!checked)} checked={checked} />
+};`}
 />
 
 

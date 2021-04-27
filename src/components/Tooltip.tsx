@@ -17,6 +17,7 @@ const contentCss = css`
 	border-radius: 3px;
 	color: #ffffff;
 	display: inline-flex;
+	font-size: 13px;
 	padding: 5px 10px;
 `;
 

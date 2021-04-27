@@ -1,5 +1,6 @@
 import Toggle, {ToggleItem} from "../../src/components/Toggle";
 import Playground from "../../docs/playground";
+import { useState } from "react";
 
 <Playground
   scope={{ Toggle, ToggleItem }}
@@ -12,12 +13,15 @@ import Playground from "../../docs/playground";
 />
 
 <Playground
-  scope={{ Toggle, ToggleItem }}
-  code={`() => (
-    <Toggle defaultValue="Yaml" value="Yaml">
+  scope={{ Toggle, ToggleItem, useState }}
+  code={`() => {
+  const [ value, setValue ] = useState("Yaml");
+  return (
+    <Toggle value={value} onValueChange={(value) => setValue(value)}>
         <ToggleItem text="Yaml" />
         <ToggleItem text="Json" />
         <ToggleItem text="Xml" />
     </Toggle>
-);`}
+  );
+};`}
 />
