@@ -12,6 +12,7 @@ const rootCss = css`
 	font-family: Inter;
 	padding: 8px 12px;
 	outline: none;
+	width: 100%;
 
 	&[disabled] {
 		background-color: #f9fafb;

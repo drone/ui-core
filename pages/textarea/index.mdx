@@ -1,14 +1,20 @@
 import Textarea from "../../src/components/Textarea";
+import Playground from "../../docs/playground";
 
 # Textarea
 
-<Textarea spellcheck={"off"} />
+The default form of a text area.
 
-<br/><br/>
+<Playground
+  scope={{ Textarea }}
+  code={`<Textarea placeholder="Enter a description …" spellcheck={"off"} />`}
+/>
 
-<Textarea disabled={true} />
+# Disabled
 
-```jsx
-<Textarea />
-<Textarea disabled={true} />
-```
+Use the disabled attribute to disable the input:
+
+<Playground
+  scope={{ Textarea }}
+  code={`<Textarea disabled={true} />`}
+/>

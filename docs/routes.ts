@@ -11,6 +11,8 @@ export default [
     },
     {
         name: "Badge",
+        path: "/badge",
+        desc: "A badge is a visual indicator for numeric values such as tallies and scores.",
     },
     {
         name: "Breadcrumbs",
@@ -31,9 +33,9 @@ export default [
         name: "Dialog",
         path: "/dialog",
     },
-    {
-        name: "Drawer",
-    },
+    // {
+    //     name: "Drawer",
+    // },
     {
         name: "Input",
         path: "/input",
@@ -46,9 +48,9 @@ export default [
         name: "Message",
         path: "/message",
     },
-    {
-        name: "Popover",
-    },
+    // {
+    //     name: "Popover",
+    // },
     {
         name: "Prompt",
     },
@@ -60,9 +62,9 @@ export default [
         path: "/select",
         desc: "Select allows users to make a single selection from a list of options."
     },
-    {
-        name: "Select Menu",
-    },
+    // {
+    //     name: "Select Menu",
+    // },
     {
         name: "Snippet",
         path: "/snippet",
@@ -83,20 +85,23 @@ export default [
     {
         name: "Textarea",
         path: "/textarea",
+        desc: "A textarea is a text field that allows a user to write or edit multi-line text.",
     },
-    {
-        name: "Toaster",
-    },
+    // {
+    //     name: "Toaster",
+    // },
     {
         name: "Toggle",
         path: "/toggle",
+        desc: "A toggle is used to switch between two or more visual states."
     },
-    {
-        name: "Toggle Group",
-    },
+    // {
+    //     name: "Toggle Group",
+    // },
     {
         name: "Tooltip",
         path: "/tooltip",
+        desc: "A tooltip is a floating, non-actionable label used to explain a user interface element or feature.",
     }
 ];
 
