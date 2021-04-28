@@ -26,7 +26,7 @@ const arrowCss = css`
 	height: 5px;
 `;
 
-const Switch: React.FC<TooltipProps> = (props) => (
+const Tooltip: React.FC<TooltipProps> = (props) => (
 	<RadixTooltip.Root delayDuration={200}>
 		<RadixTooltip.Trigger className={triggerCss}>
 			{props.children}
@@ -44,4 +44,4 @@ export interface TooltipProps {
 	children: ReactNode;
 }
 
-export default Switch;
+export default Tooltip;

@@ -43,6 +43,8 @@ export default [
     },
     {
         name: "Menu",
+        path: "/menu",
+        desc: "A menu displays a list of actions or options to a user."
     },
     {
         name: "Message",
@@ -51,9 +53,9 @@ export default [
     // {
     //     name: "Popover",
     // },
-    {
-        name: "Prompt",
-    },
+    // {
+    //     name: "Prompt",
+    // },
     {
         name: "Radio",
     },
