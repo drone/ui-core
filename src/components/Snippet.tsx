@@ -9,6 +9,13 @@ const rootCss = css`
 	background: #ffffff;
 	position: relative;
 	color: #000000;
+
+	appearance: none;
+    box-sizing: border-box;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 3px;
+    width: 100%;
+    outline: none;
 `;
 
 const buttonCss = css`

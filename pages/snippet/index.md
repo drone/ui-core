@@ -1,9 +1,11 @@
 import Snippet from "../../src/components/Snippet";
+import Playground from "../../docs/playground";
 
-# Snippet
+# Default
 
-<Snippet text="echo hello world" />
+The default form of a snippet.
 
-```jsx
-<Snippet text="echo hello world" />
-```
+<Playground
+  scope={{ Snippet }}
+  code={`<Snippet text="echo hello world" />`}
+/>

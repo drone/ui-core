@@ -7,7 +7,8 @@ const rootCss = css`
 	appearance: none;
 	border: 1px solid #d1d5db;
 	border-radius: 3px;
-	padding: 8px 12px;
+	line-height: 16px;
+	padding: 10px 12px;
 	outline: none;
 	box-sizing: border-box;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
