@@ -56,9 +56,9 @@ export default [
     // {
     //     name: "Prompt",
     // },
-    {
-        name: "Radio",
-    },
+    // {
+    //     name: "Radio",
+    // },
     {
         name: "Select",
         path: "/select",
