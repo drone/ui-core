@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 import { css, cx } from "@emotion/css";
-import colors from "../shared/colors";
+import colors from "../../shared/colors";
 
 const rootCss = css`
 	box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04),

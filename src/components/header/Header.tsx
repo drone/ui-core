@@ -15,29 +15,15 @@
 // @ts-nocheck
 
 import React from "react";
-import Button from "../button";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import cx from "classnames";
 
 // @ts-ignore
-import styles from "./Menu.module.css";
-
-export const MenuItem = (props) => {
-	return (
-		<DropdownMenu.Item className={styles.item} onSelect={props.onSelect}>
-			{props.children}
-		</DropdownMenu.Item>
-	);
-};
+import styles from "./Header.module.css";
 
 export default (props) => {
 	return (
-		<DropdownMenu.Root className={styles.root}>
-			<DropdownMenu.Trigger className={styles.trigger}>
-				{props.button || <Button>{props.trigger}</Button>}
-			</DropdownMenu.Trigger>
-			<DropdownMenu.Content className={styles.content}>
-				{props.children}
-			</DropdownMenu.Content>
-		</DropdownMenu.Root>
+		<div className={cx(styles.root, props.className)}>
+			<h1>{props.title}</h1>
+		</div>
 	);
 };
