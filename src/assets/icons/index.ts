@@ -19,6 +19,7 @@ import Close from "./Close";
 import Info from "./Info";
 import Menu from "./Menu";
 import More from "./More";
+import Warn from "./Warn";
 
 export default {
 	Alert,
@@ -28,4 +29,5 @@ export default {
 	Info,
 	Menu,
 	More,
+	Warn,
 };

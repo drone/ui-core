@@ -12,15 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import Button from "./components/Button";
-import Dialog from "./components/Dialog";
-import Header from "./components/Header";
-import Message from "./components/Message";
-import Switch from "./components/Switch";
-import Tooltip from "./components/Tooltip";
-import Layout from "./layouts/Layout";
-import Login from "./layouts/Login";
+import Assets from "./assets";
+import Components from "./components";
 import Fragments from "./fragments";
 import Layouts from "./layouts";
+import shared from "./shared";
 
-export { Fragments, Layouts };
+export { Assets, Components, Fragments, Layouts, shared };

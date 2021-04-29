@@ -1,4 +1,5 @@
 .next
+build
 dist-web
 dist-node
 node_modules
