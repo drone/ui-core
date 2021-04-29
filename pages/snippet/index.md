@@ -1,4 +1,4 @@
-import Snippet from "../../src/components/Snippet";
+import Snippet from "../../src/components/snippet";
 import Playground from "../../docs/playground";
 
 # Default

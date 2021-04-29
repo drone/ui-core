@@ -1,0 +1,35 @@
+.root {
+	display: block;
+	overflow: hidden;
+	background: #ffffff;
+	position: relative;
+	color: #000000;
+
+	appearance: none;
+	box-sizing: border-box;
+	border: 1px solid rgb(209, 213, 219);
+	border-radius: 3px;
+	width: 100%;
+	outline: none;
+}
+
+.button {
+	appearance: none;
+	border: none;
+	background: none;
+	cursor: pointer;
+	position: absolute;
+	right: 12px;
+	top: 12px;
+	text-transform: uppercase;
+}
+
+.content {
+	padding: 30px;
+	padding-right: 60px;
+	font-family: "Roboto Mono", "Lucida Console", "Monaco", monospace;
+	font-size: 14px;
+	white-space: nowrap;
+	overflow-y: auto;
+	line-height: 20px;
+}

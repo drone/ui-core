@@ -1,4 +1,4 @@
-import Spinner from "../../src/components/Spinner";
+import Spinner from "../../src/components/spinner";
 import Playground from "../../docs/playground";
 
 # Default
