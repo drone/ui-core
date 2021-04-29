@@ -14,7 +14,7 @@
 
 import Avatar from "./Avatar";
 import AvatarGroup from "./AvatarGroup";
-import Badge from "./Badge";
+import Badge from "./badge";
 import Breadcrumb from "./Breadcrumb";
 import Button from "./Button";
 import Card from "./Card";
@@ -35,7 +35,7 @@ import Switch from "./Switch";
 import Textarea from "./Textarea";
 import Toaster from "./Toaster";
 import Toggle from "./Toggle";
-import Tooltip from "./Tooltip";
+import Tooltip from "./tooltip";
 
 export default {
     Avatar,
