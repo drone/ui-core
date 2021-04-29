@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import Avatar from "./Avatar";
-import AvatarGroup from "./AvatarGroup";
+import Avatar from "./avatar";
+import AvatarGroup from "./avatar-group";
 import Badge from "./badge";
 import Breadcrumb from "./Breadcrumb";
 import Button from "./Button";

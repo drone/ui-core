@@ -1,38 +1,25 @@
+// Copyright 2021 Harness, Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// 	   http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 // @ts-nocheck
 
 import React from "react";
-import { css, cx } from "@emotion/css";
-import colors from "../shared/colors";
+import cx from "classnames";
 import * as RadixAvatar from "@radix-ui/react-avatar";
 
-const rootCss = css`
-	display: inline-block;
-	border-radius: 50%;
-	overflow: hidden;
-	user-select: none;
-	font-size: 15px;
-`;
-
-const imageCss = css`
-	flex: 1 1 auto;
-	width: 100%;
-	height:  100%;
-`;
-
-const fallbackCss = css`
-	flex: 1;
-	background: ${colors.main};
-	color: #ffffff;
-	width: inherit;
-	height: inherit;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`;
-
-const squareCss = css`
-	border-radius: 3px;
-`
+// @ts-ignore
+import styles from "./Avatar.module.css";
 
 export enum AvatarSize {
 	tiny = "16px",
@@ -70,16 +57,16 @@ export interface AvatarProps {
 
 const Avatar: React.FC<AvatarProps> = (props) => (
 	<RadixAvatar.Root
-		className={cx(rootCss, props.className, {
-			[squareCss]: props.appearance == "square",
+		className={cx(styles.root, props.className, {
+			[styles.square]: props.appearance == "square",
 		})}
 		style={{
 			width: props.size || "32px",
 			height: props.size || "32px",
 		}}
 	>
-		<RadixAvatar.Image className={imageCss} src={props.src} alt={props.alt} />
-		<RadixAvatar.Fallback className={fallbackCss} delayMs={props.src ? 500 : 0}>
+		<RadixAvatar.Image className={styles.image} src={props.src} alt={props.alt} />
+		<RadixAvatar.Fallback className={styles.fallback} delayMs={props.src ? 500 : 0}>
 			<svg width="100%" height="100%" viewBox="0 0 75 75">
 				<text x="22" y="57" fontSize="50" fill="#FFFFFF">
 					{props.alt?.charAt(0)?.toUpperCase()}

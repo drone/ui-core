@@ -1,5 +1,4 @@
-import Avatar, {AvatarSize} from "../../src/components/Avatar";
-import AvatarGroup from "../../src/components/AvatarGroup";
+import AvatarGroup from "../../src/components/avatar-group";
 import Playground from "../../docs/playground";
 
 # Default
@@ -7,7 +6,7 @@ import Playground from "../../docs/playground";
 The default avatar group component:
 
 <Playground
-  scope={{ AvatarGroup, Avatar }}
+  scope={{ AvatarGroup }}
   code={`() => {
   const data = [
     {src: "/avatar.webp"},
@@ -26,7 +25,7 @@ The default avatar group component:
 The avatar group with a custom avatar size:
 
 <Playground
-  scope={{ AvatarGroup, Avatar }}
+  scope={{ AvatarGroup }}
   code={`() => {
   const data = [
     {src: "/avatar.webp"},
@@ -44,7 +43,7 @@ The avatar group with a custom avatar size:
 The maximum number of avatars allowed in the list can be customized.
 
 <Playground
-  scope={{ AvatarGroup, Avatar }}
+  scope={{ AvatarGroup }}
   code={`() => {
   const data = [
     {src: "/avatar.webp"},

@@ -1,50 +1,36 @@
+// Copyright 2021 Harness, Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// 	   http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 // @ts-nocheck
 
 import React from "react";
-import { css, cx } from "@emotion/css";
-import colors from "../shared/colors";
-import Avatar from "./Avatar";
+import cx from "classnames";
+import Avatar from "../avatar";
 
-const rootCss = css`
-	display: inline-flex;
-
-	&> span {
-		border: 3px solid #ffffff;
-		box-sizing: border-box;
-		margin-left: -7px;
-	}
-
-	&> span:first-child {
-		margin-left: 0px;
-	}
-`;
-
-const overflowCss = css`
-	flex: 1;
-	background: ${colors.gray100};
-	color: ${colors.gray600};
-	align-items: center;
-	justify-content: center;
-	border: 3px solid #ffffff;
-	border-radius: 50%;
-	box-sizing: border-box;
-	display: flex;
-	font-size: 12px;
-	margin-left: -7px;
-	width: inherit;
-	height: inherit;
-`
+// @ts-ignore
+import styles from "./AvatarGroup.module.css";
 
 const AvatarGroup: React.FC<AvatarGroupProps> = (props) => {
 	const count = props.maxCount || 5;
 	const size = props.size || 32;
 	return (
-		<div className={cx(rootCss, props.className)}>
+		<div className={cx(styles.root, props.className)}>
 			{props.data?.slice(0, count).map(avatar => 
 				<Avatar src={avatar.src} alt={avatar.alt} size={size} />	
 			)}
 			{props.data?.length > count
-				? <span onClick={() => props.onMoreClick && props.onMoreClick()} className={overflowCss} style={{width: size}}>+{props.data.length - count}</span>
+				? <span onClick={() => props.onMoreClick && props.onMoreClick()} className={styles.overflow} style={{width: size}}>+{props.data.length - count}</span>
 				: undefined
 			}
 		</div>
