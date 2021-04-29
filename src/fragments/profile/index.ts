@@ -12,10 +12,4 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import Login from "./login";
-import Register from "./register";
-
-export default {
-	Login,
-	Register,
-};
+export { default } from "./Profile";

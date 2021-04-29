@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import Login, {Splash} from "../../../src/layouts/Login";
-import RegisterForm from "../../../src/fragments/Register";
+import RegisterForm from "../../../src/fragments/register";
 
 export default () => {
 	const router = useRouter()
