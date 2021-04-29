@@ -1,37 +1,37 @@
 :root {
-    --harness-spacing-none: 0;
-    --harness-spacing-tiny: 2px;
-    --harness-spacing-xsmall: 4px;
-    --harness-spacing-small: 8px;
-    --harness-spacing-medium: 16px;
-    --harness-spacing-large: 20px;
-    --harness-spacing-xlarge: 24px;
-    --harness-spacing-xxlarge: 32px;
-    --harness-spacing-xxxlarge: 48px;
-    --harness-spacing-huge: 96px;
+	--harness-spacing-none: 0;
+	--harness-spacing-tiny: 2px;
+	--harness-spacing-xsmall: 4px;
+	--harness-spacing-small: 8px;
+	--harness-spacing-medium: 16px;
+	--harness-spacing-large: 20px;
+	--harness-spacing-xlarge: 24px;
+	--harness-spacing-xxlarge: 32px;
+	--harness-spacing-xxxlarge: 48px;
+	--harness-spacing-huge: 96px;
 
-    /* ALIASES */
-    --harness-padding: var(--harness-spacing-medium);
-    --harness-margin: var(--harness-spacing-medium);
+	/* ALIASES */
+	--harness-padding: var(--harness-spacing-medium);
+	--harness-margin: var(--harness-spacing-medium);
 
-    /* EXTRAS */
-    /* QUESTION: should `--harness-padding-button` be a global variable or should this variable be placed in the component css? */
-    /* QUESTION: should `--harness-padding-dialog` be a global variable or should this variable be placed in the component css? */
-    /* QUESTION: should we create panel, section, subsection components and store these variables in the components css? */
-    --harness-padding-button: var(--harness-spacing-small);
-    --harness-padding-dialog: 36px 48px 48px 48px;
-    --harness-padding-form: 32px 48px 96px 32px;
-    --harness-padding-section: 0px;
-    --harness-padding-panel: 0px;
-    --harness-padding-subsection: 20px 24px;
-    --harness-margin-section: 8px 0 24px 0;
-    --harness-margin-panel: 8px 0 24px 0;
-    --harness-margin-subsection: 8px 0 0 0;
-    --harness-margin-panel-subsection: 20px 0 0 0;
-    --harness-margin-form-field: 0 12px 12px 0;
-    --harness-margin-action-buttons: 8px 0 0 0;
-    --harness-margin-form-label: 0 0 4px 0;
-    --harness-margin-form-message: 8px 0 0 0;
-    --harness-padding-form-input: 8px;
-    --harness-padding-icon: 4px;
+	/* EXTRAS */
+	/* QUESTION: should `--harness-padding-button` be a global variable or should this variable be placed in the component css? */
+	/* QUESTION: should `--harness-padding-dialog` be a global variable or should this variable be placed in the component css? */
+	/* QUESTION: should we create panel, section, subsection components and store these variables in the components css? */
+	--harness-padding-button: var(--harness-spacing-small);
+	--harness-padding-dialog: 36px 48px 48px 48px;
+	--harness-padding-form: 32px 48px 96px 32px;
+	--harness-padding-section: 0px;
+	--harness-padding-panel: 0px;
+	--harness-padding-subsection: 20px 24px;
+	--harness-margin-section: 8px 0 24px 0;
+	--harness-margin-panel: 8px 0 24px 0;
+	--harness-margin-subsection: 8px 0 0 0;
+	--harness-margin-panel-subsection: 20px 0 0 0;
+	--harness-margin-form-field: 0 12px 12px 0;
+	--harness-margin-action-buttons: 8px 0 0 0;
+	--harness-margin-form-label: 0 0 4px 0;
+	--harness-margin-form-message: 8px 0 0 0;
+	--harness-padding-form-input: 8px;
+	--harness-padding-icon: 4px;
 }

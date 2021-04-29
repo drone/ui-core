@@ -1,15 +1,12 @@
-
 // @ts-nocheck
 
 import React, { ReactNode } from "react";
 import { css, cx } from "@emotion/css";
 import colors from "../shared/colors";
 import Button from "./Button";
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
-const rootCss = css`
-
-`;
+const rootCss = css``;
 
 const triggerCss = css`
 	appearance: none;
@@ -21,11 +18,11 @@ const triggerCss = css`
 
 const contentCss = css`
 	min-width: 130px;
-	background: #FFFFFF;
+	background: #ffffff;
 	border-radius: 6px;
 	padding: 5px;
 	margin-top: 5px;
-	box-shadow: 0px 5px 15px -5px hsla(206,22%,7%,.15);
+	box-shadow: 0px 5px 15px -5px hsla(206, 22%, 7%, 0.15);
 `;
 
 const itemCss = css`

@@ -5,23 +5,21 @@ const withMDX = require("@next/mdx")({
 module.exports = withMDX({
 	webpack: (config, { webpack }) => {
 		config.plugins.push(
-		  new webpack.NormalModuleReplacementPlugin(
-			/shared\/index.ts/,
-			"shared/index_next.ts"
-		  )
+			new webpack.NormalModuleReplacementPlugin(
+				/shared\/index.ts/,
+				"shared/index_next.ts"
+			)
 		);
-		return config
+		return config;
 	},
 	pageExtensions: ["js", "jsx", "md", "mdx"],
 	async redirects() {
 		return [
-		  {
-			source: '/',
-			destination: '/avatar',
-			permanent: false,
-		  },
-		]
-	  },
+			{
+				source: "/",
+				destination: "/avatar",
+				permanent: false,
+			},
+		];
+	},
 });
-
-

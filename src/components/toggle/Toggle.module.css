@@ -1,32 +1,31 @@
-
 .group > button {
-    margin-right: 6px;
+	margin-right: 6px;
 }
 
 .group > button:last-child {
-    margin-right: 0px;
+	margin-right: 0px;
 }
 
 .item {
-    background-color: #ffffff;
-    border: 1px solid #b0b1c3;
-    color: #4f5162;
-    border-radius: 100px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-family: Inter;
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 16px;
-    padding: 0px 8px;
+	background-color: #ffffff;
+	border: 1px solid #b0b1c3;
+	color: #4f5162;
+	border-radius: 100px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-family: Inter;
+	font-weight: 500;
+	font-size: 11px;
+	line-height: 16px;
+	padding: 0px 8px;
 }
 
 .item:focus {
-    outline: none;
+	outline: none;
 }
 
 .item[data-state="on"] {
-    background-color: #0a3364;
-    border: 1px solid #0a3364;
-    color: #ffffff;
+	background-color: #0a3364;
+	border: 1px solid #0a3364;
+	color: #ffffff;
 }

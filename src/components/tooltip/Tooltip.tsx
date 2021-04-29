@@ -24,7 +24,9 @@ const Tooltip: React.FC<TooltipProps> = (props) => (
 		<RadixTooltip.Trigger className={styles.trigger}>
 			{props.children}
 		</RadixTooltip.Trigger>
-		<RadixTooltip.Content className={classnames(styles.content, props.className)}>
+		<RadixTooltip.Content
+			className={classnames(styles.content, props.className)}
+		>
 			{props.content}
 			<RadixTooltip.Arrow className={styles.arrow} />
 		</RadixTooltip.Content>

@@ -65,8 +65,15 @@ const Avatar: React.FC<AvatarProps> = (props) => (
 			height: props.size || "32px",
 		}}
 	>
-		<RadixAvatar.Image className={styles.image} src={props.src} alt={props.alt} />
-		<RadixAvatar.Fallback className={styles.fallback} delayMs={props.src ? 500 : 0}>
+		<RadixAvatar.Image
+			className={styles.image}
+			src={props.src}
+			alt={props.alt}
+		/>
+		<RadixAvatar.Fallback
+			className={styles.fallback}
+			delayMs={props.src ? 500 : 0}
+		>
 			<svg width="100%" height="100%" viewBox="0 0 75 75">
 				<text x="22" y="57" fontSize="50" fill="#FFFFFF">
 					{props.alt?.charAt(0)?.toUpperCase()}

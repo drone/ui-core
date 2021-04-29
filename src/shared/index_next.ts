@@ -21,6 +21,6 @@ import typography from "./typography";
 
 export default {
 	colors,
-    spacing,
-    typography,
+	spacing,
+	typography,
 };

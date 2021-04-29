@@ -1,6 +1,4 @@
-
-
-const colors =  {
+const colors = {
 	//
 	// PRIMARY
 	//
@@ -154,7 +152,6 @@ const colors =  {
 	magenta900: "#CA136C",
 };
 
-
 /* ================================== *
  * ===== Style Variable Aliases ===== *
  * ================================== */
@@ -184,21 +181,21 @@ const aliases = {
 	purpleBg: colors.purple50,
 	magenta: colors.magenta500,
 	magentaBg: colors.magenta50,
-  
-	darkShadowColor: 'rgb(0 0 0 / 16%)',
-	lightShadowColor: 'rgb(255 255 255 / 16%)',
-  
+
+	darkShadowColor: "rgb(0 0 0 / 16%)",
+	lightShadowColor: "rgb(255 255 255 / 16%)",
+
 	/* page and panel colors @2021-04-27 */
-	formBg: '#f8fcff',
-	formSectionBg: 'transparent',
+	formBg: "#f8fcff",
+	formSectionBg: "transparent",
 	formPanelBg: colors.gray0,
 	formSubsectionBg: colors.gray0,
-  
+
 	/* state colors @2021-04-27 */
 	error: colors.red600,
 	warning: colors.orange600,
 	success: colors.green600,
-  
+
 	/* form colors @2021-04-27 */
 	formActiveTab: colors.primary7,
 	formPrimaryButtonBg: colors.primary7,
@@ -208,7 +205,7 @@ const aliases = {
 	formInputText: colors.black,
 	formPlaceholderText: colors.gray400,
 	formLabel: colors.gray600,
-	formFieldBorder: '#dedfe9',
-}
+	formFieldBorder: "#dedfe9",
+};
 
-export default {...colors, ...aliases};
+export default { ...colors, ...aliases };

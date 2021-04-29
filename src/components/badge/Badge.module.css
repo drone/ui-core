@@ -1,25 +1,25 @@
 .root {
-    appearance: none;
-    background: #D9DAE5;
-    box-sizing: border-box;
-    border-radius: 24px;
-    color: #4F5162;
-    font-size: 12px;
-    line-height: 12px;
-    padding: 2px 6px;
-    user-select: none;
+	appearance: none;
+	background: #d9dae5;
+	box-sizing: border-box;
+	border-radius: 24px;
+	color: #4f5162;
+	font-size: 12px;
+	line-height: 12px;
+	padding: 2px 6px;
+	user-select: none;
 
-    &> div {
-        color: #999001;
-    }
+	& > div {
+		color: #999001;
+	}
 }
 
 .primary {
-    background: #4C5CB0;
-    color: #FFFFFF;
+	background: #4c5cb0;
+	color: #ffffff;
 }
 
 .important {
-    background: #CF2318;
-    color: #FFFFFF;
+	background: #cf2318;
+	color: #ffffff;
 }

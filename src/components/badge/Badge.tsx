@@ -24,24 +24,28 @@ export interface BadgeProps {
 	/**
 	 * Defines the appearance of the Badge.
 	 */
-    appearance?: "default" | "primary" | "important";
-    
-    /**
-     * Defines the maximum value for the Badge. The
-     * default max value for a badge is 99.
-     */
-    max?: number;
+	appearance?: "default" | "primary" | "important";
+
+	/**
+	 * Defines the maximum value for the Badge. The
+	 * default max value for a badge is 99.
+	 */
+	max?: number;
 }
 
 const Badge: React.FC<BadgeProps> = (props) => {
-    const max = props.max || 99;
-    const appearance = props.appearance || "default";
+	const max = props.max || 99;
+	const appearance = props.appearance || "default";
 	return (
-        <span className={cx(styles.root, props.className, {
-            [styles.primary]: appearance === "primary",
-            [styles.important]: appearance === "important",
-        })}>{props.children}</span>
-    );
+		<span
+			className={cx(styles.root, props.className, {
+				[styles.primary]: appearance === "primary",
+				[styles.important]: appearance === "important",
+			})}
+		>
+			{props.children}
+		</span>
+	);
 };
 
 export default Badge;

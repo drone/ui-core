@@ -26,13 +26,18 @@ const AvatarGroup: React.FC<AvatarGroupProps> = (props) => {
 	const size = props.size || 32;
 	return (
 		<div className={cx(styles.root, props.className)}>
-			{props.data?.slice(0, count).map(avatar => 
-				<Avatar src={avatar.src} alt={avatar.alt} size={size} />	
-			)}
-			{props.data?.length > count
-				? <span onClick={() => props.onMoreClick && props.onMoreClick()} className={styles.overflow} style={{width: size}}>+{props.data.length - count}</span>
-				: undefined
-			}
+			{props.data?.slice(0, count).map((avatar) => (
+				<Avatar src={avatar.src} alt={avatar.alt} size={size} />
+			))}
+			{props.data?.length > count ? (
+				<span
+					onClick={() => props.onMoreClick && props.onMoreClick()}
+					className={styles.overflow}
+					style={{ width: size }}
+				>
+					+{props.data.length - count}
+				</span>
+			) : undefined}
 		</div>
 	);
 };
