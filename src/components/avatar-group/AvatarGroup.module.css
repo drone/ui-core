@@ -1,15 +1,15 @@
 .root {
 	display: inline-flex;
+}
 
-	&> span {
-		border: 3px solid var(--harness-gray-0);
-		box-sizing: border-box;
-		margin-left: -7px;
-	}
+.root > span {
+    border: 3px solid var(--harness-gray-0);
+    box-sizing: border-box;
+    margin-left: -7px;
+}
 
-	&> span:first-child {
-		margin-left: 0px;
-	}
+.root > span:first-child {
+    margin-left: 0px;
 }
 
 .overflow {

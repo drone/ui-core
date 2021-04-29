@@ -34,7 +34,7 @@ import Spinner from "./Spinner";
 import Switch from "./Switch";
 import Textarea from "./Textarea";
 import Toaster from "./Toaster";
-import Toggle from "./Toggle";
+import Toggle from "./toggle";
 import Tooltip from "./tooltip";
 
 export default {
