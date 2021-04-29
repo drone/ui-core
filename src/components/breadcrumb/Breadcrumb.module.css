@@ -1,0 +1,26 @@
+.root {
+	display: inline-flex;
+	align-items: center;
+
+	a,
+	a:visited {
+		color: var(--harness-primary-6);
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: var(--harness-primary-8);
+	}
+
+	a:active {
+		color: var(--harness-primary-9);
+	}
+}
+
+.separator {
+	width: 16px;
+	height: 16px;
+	color: var(--harness-primary-6);
+	display: inline-block;
+	margin: 0px 5px;
+}

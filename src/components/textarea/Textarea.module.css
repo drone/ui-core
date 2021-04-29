@@ -11,15 +11,15 @@
 }
 
 .root[disabled] {
-    background-color: #f9fafb;
-    cursor: not-allowed;
+	background-color: #f9fafb;
+	cursor: not-allowed;
 }
 
 .root:focus {
-    border-color: #2563eb;
-    box-shadow: 0 0 0 2px #bfdbfe;
+	border-color: #2563eb;
+	box-shadow: 0 0 0 2px #bfdbfe;
 }
 
 .root::placeholder {
-    color: #9ca3af;
+	color: #9ca3af;
 }

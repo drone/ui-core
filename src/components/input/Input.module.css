@@ -7,12 +7,12 @@
 	font-family: Inter;
 	padding: 10px 12px;
 	width: 100%;
-    outline: none;
+	outline: none;
 }
 
 .root[disabled] {
 	background-color: #f9fafb;
-    cursor: not-allowed;
+	cursor: not-allowed;
 }
 
 .root::placeholder {
