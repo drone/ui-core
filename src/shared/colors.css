@@ -1,0 +1,142 @@
+:root {
+
+    /* PRIMARY */
+	--harness-primary-1: #effbff;
+	--harness-primary-2: #cef4fe;
+	--harness-primary-3: #a3e9ff;
+	--harness-primary-4: #3dc7f6;
+	--harness-primary-5: #00ade4; /* brand */
+	--harness-primary-6: #0092e4;
+	--harness-primary-7: #0378d5; /* main */
+	--harness-primary-8: #004ca5;
+	--harness-primary-9: #0b3364;
+	--harness-primary-10: #1b1b1b;
+
+    /* ALIASES */
+	--harness-brand: #00ade4;
+	--harness-main: #0378d5;
+
+    /* GRAYSCALE */
+	--harness-gray-0: #FFFFFF;
+	--harness-gray-50: #FAFBFC;
+	--harness-gray-100: #F3F3FA;
+	--harness-gray-200: #D9DAE5;
+	--harness-gray-300: #B0B1C3;
+	--harness-gray-400: #9293AB;
+	--harness-gray-500: #6B6D85;
+	--harness-gray-600: #4F5162;
+	--harness-gray-700: #383946;
+	--harness-gray-800: #22222A;
+	--harness-gray-900: #0B0B0D;
+	--harness-black: #000000;
+
+	/* PRIMARY COLORS */
+    /* GREEN */
+	--harness-green-50: #E4F7E1;
+	--harness-green-100: #D8F3D4;
+	--harness-green-200: #BDEAB7;
+	--harness-green-300: #A2E29B;
+	--harness-green-400: #86D981;
+	--harness-green-500: #4DC952;
+	--harness-green-600: #42AB45;
+	--harness-green-700: #299B2C;
+	--harness-green-800: #1B841D;
+	--harness-green-900: #1E5C1F;
+
+    /* BLUE */
+	--harness-blue-50: #F4F6FF;
+	--harness-blue-100: #DAE0FF;
+	--harness-blue-200: #B1BEFF;
+	--harness-blue-300: #97A7FF;
+	--harness-blue-400: #8598FF;
+	--harness-blue-500: #798BEC;
+	--harness-blue-600: #6374D0;
+	--harness-blue-700: #4C5CB0;
+	--harness-blue-800: #39478F;
+	--harness-blue-900: #2D376D;
+
+    /* YELLOW */
+	--harness-yellow-50: #FFFBEE;
+	--harness-yellow-100: #FFF9E7;
+	--harness-yellow-200: #FEF1C4;
+	--harness-yellow-300: #FEE89D;
+	--harness-yellow-400: #FEDF76;
+	--harness-yellow-500: #FDD13B;
+	--harness-yellow-600: #FDCC35;
+	--harness-yellow-700: #FCC62D;
+	--harness-yellow-800: #FCC026;
+	--harness-yellow-900: #FCB519;
+
+    /* ORANGE */
+	--harness-orange-50: #FFF5ED;
+	--harness-orange-100: #FFF0E6;
+	--harness-orange-200: #FFDABF;
+	--harness-orange-300: #FFC195;
+	--harness-orange-400: #FFA86B;
+	--harness-orange-500: #FF832B;
+	--harness-orange-600: #FF7B26;
+	--harness-orange-700: #FF7020;
+	--harness-orange-800: #FF661A;
+	--harness-orange-900: #FF5310;
+
+    /* RED */
+	--harness-red-50: #FCEDEC;
+	--harness-red-100: #FBE6E4;
+	--harness-red-200: #F5C0BC;
+	--harness-red-300: #EF9790;
+	--harness-red-400: #EE5F54;
+	--harness-red-500: #E43326;
+	--harness-red-600: #DA291D;
+	--harness-red-700: #CF2318;
+	--harness-red-800: #C31F17;
+	--harness-red-900: #B41710;
+
+	/* SECONDARY COLORS */
+    /* TEAL */
+	--harness-teal-50: #D3FCFE;
+	--harness-teal-100: #C0FBFE;
+	--harness-teal-200: #A9EFF2;
+	--harness-teal-300: #73DFE7;
+	--harness-teal-400: #47D5DF;
+	--harness-teal-500: #0BC8D6;
+	--harness-teal-600: #03C0CD;
+	--harness-teal-700: #06B7C3;
+	--harness-teal-800: #05AAB6;
+	--harness-teal-900: #07A0AB;
+
+    /* LIME GREEN */
+	--harness-lime-50: #F1FAE6;
+	--harness-lime-100: #EAF8DB;
+	--harness-lime-200: #C5E1A5;
+	--harness-lime-300: #AADC72;
+	--harness-lime-400: #9CCC65;
+	--harness-lime-500: #7FB800;
+	--harness-lime-600: #76AF34;
+	--harness-lime-700: #689F38;
+	--harness-lime-800: #558B2F;
+	--harness-lime-900: #487A34;
+
+    /* PURPLE */
+	--harness-purple-50: #EADEFF;
+	--harness-purple-100: #E1D0FF;
+	--harness-purple-200: #CFB4FF;
+	--harness-purple-300: #C19EFF;
+	--harness-purple-400: #AE82FC;
+	--harness-purple-500: #7D4DD3;
+	--harness-purple-600: #6938C0;
+	--harness-purple-700: #592BAA;
+	--harness-purple-800: #4D278F;
+	--harness-purple-900: #4D0B8F;
+
+    /* MAGENTA */
+	--harness-magenta-50: #FFF3F9;
+	--harness-magenta-100: #FFEEF7;
+	--harness-magenta-200: #FFCDE4;
+	--harness-magenta-300: #FFABD3;
+	--harness-magenta-400: #FF8AC1;
+	--harness-magenta-500: #FF479F;
+	--harness-magenta-600: #F53693;
+	--harness-magenta-700: #EE2A89;
+	--harness-magenta-800: #D91F79;
+	--harness-magenta-900: #CA136C;
+}

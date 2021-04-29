@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import shared from "./shared";
 import Assets from "./assets";
 import Components from "./components";
 import Fragments from "./fragments";
 import Layouts from "./layouts";
-import shared from "./shared";
 
-export { Assets, Components, Fragments, Layouts, shared };
+export { shared, Assets, Components, Fragments, Layouts };

@@ -12,10 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// HACK: this alternate file is loaded for next.js which only
+// supports loading global css files from _app.js
+
 import colors from "./colors";
 import spacing from "./spacing";
 import typography from "./typography";
-import "./colors.css";
 
 export default {
 	colors,

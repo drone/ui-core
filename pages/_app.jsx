@@ -1,4 +1,5 @@
 import "../public/styles.css";
+import "../src/shared/colors.css";
 
 import { useRouter } from "next/router";
 import Layout from "../docs/layout";
