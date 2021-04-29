@@ -32,6 +32,7 @@ export default [
     {
         name: "Dialog",
         path: "/dialog",
+        desc: "A modal dialog displays content that requires user interaction, in a layer above the page.",
     },
     // {
     //     name: "Drawer",

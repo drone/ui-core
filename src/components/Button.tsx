@@ -155,6 +155,7 @@ export default function Button(props) {
 	return (
 		<button
 			disabled={props.disabled == "true"}
+			onClick={props.onClick}
 			className={cx(rootCss, props.className, {
 				[secondaryCss]: props.secondary || props.outline == "true",
 				[successCss]: props.intent === "success" && props.outline != "true",

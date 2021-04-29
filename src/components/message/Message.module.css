@@ -1,0 +1,69 @@
+.icon {
+	border-radius: 50%;
+	color: #fff;
+	width: 18px;
+	height: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--harness-blue-600);
+	svg {
+		width: 14px;
+		height: 14px;
+	}
+}
+
+.iconInfo {
+	background-color: var(--harness-blue-600);
+}
+
+.iconSuccess {
+	background-color: var(--harness-green-600);
+}
+
+.iconWarning {
+	background-color: var(--harness-yellow-900);
+}
+
+.iconAlert {
+	background-color: var(--harness-red-600);
+}
+
+.root {
+	border-radius: 2px;
+	background-color: var(--harness-blue-50);
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 20px auto;
+	padding-left: 18px;
+	border-left: 3px solid var(--harness-blue-600);
+	font-size: 14px;
+	width: 100%;
+
+	&[data-type="success"] {
+		border-color: var(--harness-green-600);
+		background-color: var(--harness-green-50);
+	}
+
+	&[data-type="warn"],
+	&[data-type="warning"] {
+		border-color: var(--harness-yellow-900);
+		background-color: var(--harness-yellow-50);
+	}
+
+	&[data-type="alert"] {
+		border-color: var(--harness-red-600);
+		background-color: var(--harness-red-50);
+	}
+}
+
+.content {
+	padding: 16px 54px;
+	padding-left: 18px;
+}
+
+.gutter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
