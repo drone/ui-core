@@ -1,0 +1,29 @@
+.root {
+	appearance: none;
+	box-sizing: border-box;
+	border: 1px solid #d1d5db;
+	border-radius: 3px;
+	background-color: #ffffff;
+	font-family: Inter;
+	padding: 10px 12px;
+	width: 100%;
+    outline: none;
+}
+
+.root[disabled] {
+	background-color: #f9fafb;
+    cursor: not-allowed;
+}
+
+.root::placeholder {
+	color: var(--harness-gray-300);
+}
+
+.root:focus {
+	border-color: #2563eb;
+	box-shadow: 0 0 0 2px #bfdbfe;
+}
+
+.root:focus::placeholder {
+	color: var(--harness-gray-400);
+}

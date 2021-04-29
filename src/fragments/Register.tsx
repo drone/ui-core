@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { css, cx } from "@emotion/css";
-import Input from "../components/Input";
+import Input from "../components/input";
 import Harness from "../assets/logos/HarnessLarge";
 
 const rootCss = css`

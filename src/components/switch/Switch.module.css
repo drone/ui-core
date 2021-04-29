@@ -1,9 +1,4 @@
-import React from "react";
-import { css, cx } from "@emotion/css";
-import colors from "../shared/colors";
-import * as RadixSwitch from "@radix-ui/react-switch";
-
-const rootCss = css`
+.root {
 	display: inline-block;
 	appearance: none;
 	box-sizing: border-box;
@@ -26,8 +21,8 @@ const rootCss = css`
 	}
 
 	&[data-state="checked"] {
-		background-color: ${colors.main};
-		border-color: ${colors.main};
+		background-color: var(--harness-primary-7);
+		border-color: var(--harness-primary-7);
 	}
 
 	&[disabled] {
@@ -39,9 +34,9 @@ const rootCss = css`
 	&[disabled] .thumb {
 		background-color: #606170;
 	}
-`;
+}
 
-const thumbCss = css`
+.thumb {
 	display: block;
 	width: 11px;
 	height: 11px;
@@ -56,24 +51,4 @@ const thumbCss = css`
 	&[data-state="checked"] {
 		transform: translateX(11px);
 	}
-`;
-
-const Switch: React.FC<SwitchProps> = (props) => (
-	<RadixSwitch.Root
-		className={cx(rootCss, props.className)}
-		onCheckedChange={props.onCheckedChange}
-		checked={props.checked}
-		disabled={props.disabled}
-	>
-		<RadixSwitch.Thumb className={thumbCss} />
-	</RadixSwitch.Root>
-);
-
-export interface SwitchProps {
-	className?: string;
-	onCheckedChange?: any;
-	checked?: boolean;
-	disabled?: boolean;
 }
-
-export default Switch;
