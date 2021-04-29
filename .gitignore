@@ -1,5 +1,7 @@
+.docz
 .next
 build
+dist
 dist-web
 dist-node
 node_modules

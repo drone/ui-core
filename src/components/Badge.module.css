@@ -8,6 +8,10 @@
     line-height: 12px;
     padding: 2px 6px;
     user-select: none;
+
+    &> div {
+        color: #999001;
+    }
 }
 
 .primary {
@@ -18,5 +22,4 @@
 .important {
     background: #CF2318;
     color: #FFFFFF;
-    content: "this is a crazy idea"
 }

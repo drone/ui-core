@@ -1,11 +1,14 @@
 {
 	"name": "drone-ui-core",
 	"version": "1.0.0",
-	"main": "dist-node/index.js",
-	"module": "dist-web/index.js",
+	"source": "src/index.ts",
+	"main": "dist/index.js",
+	"module": "dist/index.module.js",
+	"style": "dist/index.css",
+	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "rollup -c",
-		"watch": "rollup -cw",
+		"xxx": "microbundle --help",
+		"build": "microbundle --jsx React.createElement --css-modules true",
 		"format": "prettier --use-tabs --write src/** --write *.json --write *.js --write pages/*.js --write pages/*.jsx",
 		"serve": "next dev -p 9000",
 		"site": "next build; next export"
@@ -27,6 +30,7 @@
 		"@types/react": "^17.0.3",
 		"autoprefixer": "^10.2.5",
 		"mdx-prism": "^0.3.3",
+		"microbundle": "^0.13.0",
 		"next": "^10.1.3",
 		"postcss": "^8.2.13",
 		"postcss-modules": "^4.0.0",
