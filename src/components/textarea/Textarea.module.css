@@ -1,0 +1,25 @@
+.root {
+	appearance: none;
+	box-sizing: border-box;
+	border: 1px solid #d1d5db;
+	border-radius: 3px;
+	background-color: #ffffff;
+	font-family: Inter;
+	padding: 8px 12px;
+	outline: none;
+	width: 100%;
+}
+
+.root[disabled] {
+    background-color: #f9fafb;
+    cursor: not-allowed;
+}
+
+.root:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px #bfdbfe;
+}
+
+.root::placeholder {
+    color: #9ca3af;
+}

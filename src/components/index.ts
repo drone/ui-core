@@ -32,7 +32,7 @@ import Select from "./Select";
 import Snippet from "./Snippet";
 import Spinner from "./Spinner";
 import Switch from "./Switch";
-import Textarea from "./Textarea";
+import Textarea from "./textarea";
 import Toaster from "./Toaster";
 import Toggle from "./toggle";
 import Tooltip from "./tooltip";
