@@ -3,9 +3,9 @@ import Pills, { Pill, PillPanel, PillList } from "../../src/components/pills";
 import Playground from "../../docs/playground";
 import { useState } from "react";
 
-# Textarea
+# Tabs
 
-The default form of a text area.
+The default form of tabs.
 
 <Playground
   scope={{ Tabs, Tab, TabPanel, TabList  }}
