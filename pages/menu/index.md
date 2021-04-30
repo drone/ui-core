@@ -1,4 +1,4 @@
-import Button from "../../src/components/Button";
+import Button from "../../src/components/button";
 import Menu, { MenuItem } from "../../src/components/menu";
 import Playground from "../../docs/playground";
 
