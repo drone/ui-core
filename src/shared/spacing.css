@@ -1,4 +1,21 @@
 :root {
+	--harness-spacing-0: 0px;
+	--harness-spacing-1: 2px;
+	--harness-spacing-2: 4px;
+	--harness-spacing-3: 8px;
+	--harness-spacing-4: 12px;
+	--harness-spacing-5: 16px;
+	--harness-spacing-6: 20px;
+	--harness-spacing-7: 24px;
+	--harness-spacing-8: 32px;
+	--harness-spacing-9: 40px;
+	--harness-spacing-10: 48px;
+	--harness-spacing-11: 64px;
+	--harness-spacing-12: 72px;
+	--harness-spacing-13: 96px;
+	--harness-spacing-14: 160px;
+
+	/* ALIASES */
 	--harness-spacing-none: 0;
 	--harness-spacing-tiny: 2px;
 	--harness-spacing-xsmall: 4px;
