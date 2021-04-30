@@ -84,6 +84,8 @@ export default [
     },
     {
         name: "Tabs",
+        path: "/tabs",
+        desc: "Tabs are used to organize content by grouping similar information on the same page."
     },
     {
         name: "Textarea",

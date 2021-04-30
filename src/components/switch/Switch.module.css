@@ -30,10 +30,6 @@
 		background-color: #f2f2f5;
 		border-color: #ebebf0;
 	}
-
-	&[disabled] .thumb {
-		background-color: #606170;
-	}
 }
 
 .thumb {

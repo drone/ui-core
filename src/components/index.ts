@@ -25,6 +25,7 @@ import Header from "./header";
 import Input from "./input";
 import Menu from "./menu";
 import Message from "./message";
+import Pills from "./pills";
 import Popover from "./popover";
 import Radio from "./radio";
 import Search from "./search";
@@ -32,6 +33,7 @@ import Select from "./select";
 import Snippet from "./snippet";
 import Spinner from "./spinner";
 import Switch from "./switch";
+import Tabs from "./tabs";
 import Textarea from "./textarea";
 import Toaster from "./toaster";
 import Toggle from "./toggle";
@@ -51,6 +53,7 @@ export default {
 	Input,
 	Menu,
 	Message,
+	Pills,
 	Popover,
 	Radio,
 	Search,
@@ -58,6 +61,7 @@ export default {
 	Snippet,
 	Spinner,
 	Switch,
+	Tabs,
 	Textarea,
 	Toaster,
 	Toggle,

@@ -15,47 +15,51 @@
 // @ts-nocheck
 
 import React from "react";
-import * as ToggleGroup from "@radix-ui/react-toggle-group";
+import classnames from "classnames";
+import * as Tabs from "@radix-ui/react-tabs";
 
 // @ts-ignore
-import styles from "./Toggle.module.css";
+import styles from "./Pills.module.css";
 
-//
-// TODO use the Radix Tab instead of the Radix toggle group.
-//
-
-export const ToggleItem = (props) => {
-	const handleClick = (event) => {
-		// this hack prevent a selected item from
-		// being unselected, which effective enforces
-		// an item to always be selected.
-		if (event.target.ariaPressed === "true") {
-			event.preventDefault();
-			event.stopPropagation();
-			return;
-		}
-	};
+export const Pill = (props) => {
 	return (
-		<ToggleGroup.Item
-			onClick={handleClick}
-			className={styles.item}
-			value={props.text}
+		<Tabs.Tab
+			className={classnames(styles.tab, props.className)}
+			value={props.value}
 		>
-			{props.text}
-		</ToggleGroup.Item>
+			{props.children}
+		</Tabs.Tab>
+	);
+};
+
+export const PillList = (props) => {
+	return (
+		<Tabs.List className={classnames(styles.list, props.className)}>
+			{props.children}
+		</Tabs.List>
+	);
+};
+
+export const PillPanel = (props) => {
+	return (
+		<Tabs.Panel
+			className={classnames(styles.panel, props.className)}
+			value={props.value}
+		>
+			{props.children}
+		</Tabs.Panel>
 	);
 };
 
 export default (props) => {
 	return (
-		<ToggleGroup.Root
-			className={styles.group}
-			type="single"
-			defaultValue={props.defaultValue}
+		<Tabs.Root
+			className={classnames(styles.root, props.className)}
+			defaultValue={props.default}
 			value={props.value}
 			onValueChange={props.onValueChange}
 		>
 			{props.children}
-		</ToggleGroup.Root>
+		</Tabs.Root>
 	);
 };
