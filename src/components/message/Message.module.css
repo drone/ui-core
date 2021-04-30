@@ -6,27 +6,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--harness-blue-600);
 	svg {
-		width: 14px;
-		height: 14px;
+		width: 18px;
+		height: 18px;
 	}
-}
-
-.iconInfo {
-	background-color: var(--harness-blue-600);
-}
-
-.iconSuccess {
-	background-color: var(--harness-green-600);
-}
-
-.iconWarning {
-	background-color: var(--harness-yellow-900);
-}
-
-.iconAlert {
-	background-color: var(--harness-red-600);
 }
 
 .root {
@@ -47,12 +30,14 @@
 
 	&[data-type="warn"],
 	&[data-type="warning"] {
-		border-color: var(--harness-yellow-900);
+		border-color: var(--harness-orange-500);
 		background-color: var(--harness-yellow-50);
 	}
 
+	&[data-type="danger"],
+	&[data-type="error"],
 	&[data-type="alert"] {
-		border-color: var(--harness-red-600);
+		border-color: var(--harness-red-500);
 		background-color: var(--harness-red-50);
 	}
 }

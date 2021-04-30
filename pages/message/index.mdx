@@ -1,22 +1,47 @@
 import Message from "../../src/components/message";
 import Playground from "../../docs/playground";
 
+# Default
+
+The default form of a message.
+
+<Playground
+  scope={{ Message }}
+  code={`<Message>Neutral Info Displayed Here</Message>`}
+/>
+
+# Info
+
+Info messages alert the user to additional information without requiring an action.
+
 <Playground
   scope={{ Message }}
   code={`<Message type="info">Neutral Info Displayed Here</Message>`}
 />
+
+# Success
+
+Success messages let the user know that they have completed an action.
 
 <Playground
   scope={{ Message }}
   code={`<Message type="success">Successful Message To Those Who Did Good</Message>`}
 />
 
-<Playground
-  scope={{ Message }}
-  code={`<Message type="alert">Error Appears When You Do Wrong Or There Is A System Fault</Message>`}
-/>
+# Error
+
+Error messages let the user know that something has gone wrong after they've tried to do something.
 
 <Playground
   scope={{ Message }}
-  code={`<Message type="warn">Warning Text Here So You Can Be More Careful</Message>`}
+  code={`<Message type="error">Error Appears When You Do Wrong Or There Is A System Fault</Message>`}
+/>
+
+# Warning
+
+Warning messages appear before we request the user to take action.
+
+<Playground
+  scope={{ Message }}
+  code={`<Message type="warning">Warning Text Here So You Can Be More Careful</Message>`}
 />

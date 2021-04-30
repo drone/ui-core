@@ -50,6 +50,7 @@ export default [
     {
         name: "Message",
         path: "/message",
+        desc: "Messages appear before we request the user to take action. This is usually in anticipation of a significant change."
     },
     // {
     //     name: "Popover",
@@ -60,6 +61,11 @@ export default [
     // {
     //     name: "Radio",
     // },
+    {
+        name: "Pills",
+        path: "/pills",
+        desc: "Pills are used to organize content by grouping similar information on the same page. Pills are functionally equivalent to Tabs."
+    },
     {
         name: "Select",
         path: "/select",
