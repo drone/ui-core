@@ -1,7 +1,6 @@
-import Highlight, { defaultProps } from "prism-react-renderer";
 import {LiveProvider, LiveEditor, LiveError, LivePreview} from "react-live";
 import { css } from "@emotion/css";
-import colors from "../src/shared/colors";
+import colors from "./foundations/colors";
 import theme from "./theme";
 
 const rootCss = css`

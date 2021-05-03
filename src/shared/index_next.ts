@@ -15,12 +15,4 @@
 // HACK: this alternate file is loaded for next.js which only
 // supports loading global css files from _app.js
 
-import colors from "./colors";
-import spacing from "./spacing";
-import typography from "./typography";
-
-export default {
-	colors,
-	spacing,
-	typography,
-};
+export default {};

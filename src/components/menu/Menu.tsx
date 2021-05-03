@@ -16,6 +16,7 @@
 
 import React from "react";
 import Button from "../button";
+import Icon from "../../assets/icons/ChevronDown";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
 // @ts-ignore
@@ -33,7 +34,11 @@ export default (props) => {
 	return (
 		<DropdownMenu.Root className={styles.root}>
 			<DropdownMenu.Trigger className={styles.trigger}>
-				{props.button || <Button>{props.trigger}</Button>}
+				{props.button || (
+					<Button iconAfter={<Icon className={styles.chevron} />}>
+						{props.trigger}
+					</Button>
+				)}
 			</DropdownMenu.Trigger>
 			<DropdownMenu.Content className={styles.content}>
 				{props.children}

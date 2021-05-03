@@ -1,5 +1,5 @@
 import { css, cx } from "@emotion/css";
-import colors from "../src/shared/colors";
+import colors from "./foundations/colors";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import routes, { samples, foundation } from "./routes";

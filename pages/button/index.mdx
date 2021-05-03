@@ -1,12 +1,16 @@
 import Button from "../../src/components/button";
 import Playground from "../../docs/playground";
 
+export const Icon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+);
+
 # Default
 
 The default form of a button.
 
 <Playground
-  scope={{ Button }}
+  scope={{ Button, Icon }}
   code={`<Button>Button</Button>`}
 />
 
@@ -15,8 +19,8 @@ The default form of a button.
 The button has a rounded appearance:
 
 <Playground
-  scope={{ Button }}
-  code={`<Button rounded={true}>Button</Button>`}
+  scope={{ Button, Icon }}
+  code={`<Button rounded={true}>Rounded</Button>`}
 />
 
 # Rounded
@@ -24,11 +28,11 @@ The button has a rounded appearance:
 The button has an outlined appearance:
 
 <Playground
-  scope={{ Button }}
+  scope={{ Button, Icon }}
   code={`() => (
       <>
-        <Button rounded={false} appearance="outline">Button</Button>
-        <Button rounded={true}  appearance="outline">Button</Button>
+        <Button rounded={false} appearance="outline">Outline</Button>
+        <Button rounded={true}  appearance="outline">Outline</Button>
       </>
 );`}
 />
@@ -38,29 +42,47 @@ The button has an outlined appearance:
 The button is disabled:
 
 <Playground
-  scope={{ Button }}
+  scope={{ Button, Icon }}
   code={`() => (
       <>
-        <Button rounded={false} appearance="default" disabled={true}>Button</Button>
-        <Button rounded={true}  appearance="default" disabled={true}>Button</Button>
-        <Button rounded={false} appearance="outline" disabled={true}>Button</Button>
-        <Button rounded={true}  appearance="outline" disabled={true}>Button</Button>
+        <Button rounded={false} appearance="default" disabled={true}>Disabled</Button>
+        <Button rounded={true}  appearance="default" disabled={true}>Disabled</Button>
+        <Button rounded={false} appearance="outline" disabled={true}>Disabled</Button>
+        <Button rounded={true}  appearance="outline" disabled={true}>Disabled</Button>
       </>
 );`}
 />
 
 # Type
 
-## Default
+## Danger
+
+The danger button appears as a final confirmation for a destructive action such as deleting. These are found mostly in confirmation modals.
 
 <Playground
-  scope={{ Button }}
+  scope={{ Button, Icon }}
   code={`() => (
       <>
-        <Button rounded={false} appearance="default">Button</Button>
-        <Button rounded={true}  appearance="default">Button</Button>
-        <Button rounded={false} appearance="outline">Button</Button>
-        <Button rounded={true}  appearance="outline">Button</Button>
+        <Button rounded={false} appearance="default" type="danger">Danger</Button>
+        <Button rounded={true}  appearance="default" type="danger">Danger</Button>
+        <Button rounded={false} appearance="outline" type="danger">Danger</Button>
+        <Button rounded={true}  appearance="outline" type="danger">Danger</Button>
+      </>
+);`}
+/>
+
+## Warning
+
+A warning button appears before we request the user to take action, usually in anticipation of a significant change. These are found mostly in confirmation modals.
+
+<Playground
+  scope={{ Button, Icon }}
+  code={`() => (
+      <>
+        <Button rounded={false} appearance="default" type="warning">Warning</Button>
+        <Button rounded={true}  appearance="default" type="warning">Warning</Button>
+        <Button rounded={false} appearance="outline" type="warning">Warning</Button>
+        <Button rounded={true}  appearance="outline" type="warning">Warning</Button>
       </>
 );`}
 />
@@ -68,41 +90,50 @@ The button is disabled:
 ## Success
 
 <Playground
-  scope={{ Button }}
+  scope={{ Button, Icon }}
   code={`() => (
       <>
-        <Button rounded={false} appearance="default" type="success">Button</Button>
-        <Button rounded={true}  appearance="default" type="success">Button</Button>
-        <Button rounded={false} appearance="outline" type="success">Button</Button>
-        <Button rounded={true}  appearance="outline" type="success">Button</Button>
+        <Button rounded={false} appearance="default" type="success">Success</Button>
+        <Button rounded={true}  appearance="default" type="success">Success</Button>
+        <Button rounded={false} appearance="outline" type="success">Success</Button>
+        <Button rounded={true}  appearance="outline" type="success">Success</Button>
       </>
 );`}
 />
 
-## Danger
+
+# Full Width
+
+Buttons can be expanded to full width to fill its parent container.
 
 <Playground
-  scope={{ Button }}
-  code={`() => (
-      <>
-        <Button rounded={false} appearance="default" type="danger">Button</Button>
-        <Button rounded={true}  appearance="default" type="danger">Button</Button>
-        <Button rounded={false} appearance="outline" type="danger">Button</Button>
-        <Button rounded={true}  appearance="outline" type="danger">Button</Button>
-      </>
-);`}
+  scope={{ Button, Icon }}
+  code={`<Button fitParent={true}>Button</Button>`}
 />
 
-## Warning
+# Icon before
+
+Display an icon before the text.
 
 <Playground
-  scope={{ Button }}
-  code={`() => (
-      <>
-        <Button rounded={false} appearance="default" type="warning">Button</Button>
-        <Button rounded={true}  appearance="default" type="warning">Button</Button>
-        <Button rounded={false} appearance="outline" type="warning">Button</Button>
-        <Button rounded={true}  appearance="outline" type="warning">Button</Button>
-      </>
-);`}
+  scope={{ Button, Icon }}
+  code={`<Button iconBefore={<Icon />}>Icon Before</Button>`}
+/>
+
+# Icon after
+
+Display an icon after the text.
+
+<Playground
+  scope={{ Button, Icon }}
+  code={`<Button iconAfter={<Icon />}>Icon After</Button>`}
+/>
+
+# Icon only
+
+Display an icon in lieu of text.
+
+<Playground
+  scope={{ Button, Icon }}
+  code={`<Button><Icon /></Button>`}
 />

@@ -2,7 +2,7 @@ import { css } from "@emotion/css";
 import Navbar from "./navbar";
 import Header from "./header";
 import Sidebar from "./sidebar";
-import colors from "../src/shared/colors";
+import colors from "./foundations/colors";
 
 const rootCss = css`
     display: grid;

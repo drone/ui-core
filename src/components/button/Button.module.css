@@ -14,6 +14,10 @@
 	background-color: var(--harness-primary-7);
 	padding: 0px 24px;
 
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
 	&:focus {
 		box-shadow: 0px 0px 0px 3px var(--harness-blue-100);
 	}
@@ -101,6 +105,26 @@
 
 .rounded {
 	border-radius: 24px;
+}
+
+/**
+ * full width
+ */
+
+.fill {
+	width: 100%;
+}
+
+/**
+ * icons
+ */
+
+.hasIconBefore svg:first-of-type {
+	margin-right: var(--harness-spacing-small);
+}
+
+.hasIconAfter svg:last-of-type {
+	margin-left: var(--harness-spacing-small);
 }
 
 /*

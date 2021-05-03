@@ -12,15 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import colors from "./colors";
-import spacing from "./spacing";
-import typography from "./typography";
 import "./colors.css";
 import "./spacing.css";
 import "./typography.css";
 
-export default {
-	colors,
-	spacing,
-	typography,
-};
+export default {};

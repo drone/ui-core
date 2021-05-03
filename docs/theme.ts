@@ -1,5 +1,5 @@
 import { PrismTheme } from 'prism-react-renderer'
-import colors from "../src/shared/colors";
+import colors from "./foundations/colors";
 
 export default {
   plain: {

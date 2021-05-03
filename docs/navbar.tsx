@@ -1,5 +1,5 @@
 import { css } from "@emotion/css";
-import colors from "../src/shared/colors";
+import colors from "./foundations/colors";
 import Link from "next/link";
 import Harness from "../src/assets/logos/HarnessLarge";
 

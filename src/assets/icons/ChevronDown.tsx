@@ -12,30 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// TODO remove unused info icon
-// TODO remove unused warn icon
-// TODO remove unused alert icon
-// TODO remove other unused icons
-// TODO if check icon is only used by checkbox, move to checkbox folder
+// @ts-nocheck
 
-import Alert from "./Alert";
-import Check from "./Check";
-import Checkmark from "./Checkmark";
-import ChevronDown from "./ChevronDown";
-import Close from "./Close";
-import Info from "./Info";
-import Menu from "./Menu";
-import More from "./More";
-import Warn from "./Warn";
+import React from "react";
 
-export default {
-	Alert,
-	Check,
-	Checkmark,
-	ChevronDown,
-	Close,
-	Info,
-	Menu,
-	More,
-	Warn,
-};
+export default ({ className }) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="24"
+		height="24"
+		viewBox="0 0 24 24"
+		fill="none"
+		stroke="currentColor"
+		strokeWidth="2"
+		strokeLinecap="round"
+		strokeLinejoin="round"
+		className={className}
+	>
+		<polyline points="6 9 12 15 18 9"></polyline>
+	</svg>
+);

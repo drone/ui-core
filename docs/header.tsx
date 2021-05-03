@@ -1,10 +1,7 @@
 import { css } from "@emotion/css";
 import { useRouter } from "next/router";
-import colors from "../src/shared/colors";
-import Link from "next/link";
-import Harness from "../src/assets/logos/HarnessLarge";
+import colors from "./foundations/colors";
 import routes from "./routes";
-import { route } from "next/dist/next-server/server/router";
 
 const rootCss = css`
     background-color: ${colors.gray50};
