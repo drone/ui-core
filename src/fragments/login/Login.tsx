@@ -21,6 +21,10 @@ import Harness from "../../assets/logos/HarnessLarge";
 // @ts-ignore
 import styles from "./Login.module.css";
 
+// TODO support for overriding the default logo
+// TODO use harness color variables
+// TODO use harness spacing variables
+
 export default (props) => {
 	const usernameElem = useRef(null);
 	const passwordElem = useRef(null);

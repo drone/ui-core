@@ -15,46 +15,15 @@
 // @ts-nocheck
 
 import React from "react";
-import { css, cx } from "@emotion/css";
-import colors from "../shared/colors";
+import cx from "classnames";
 
-const rootCss = css`
-	display: grid;
-	grid-template-columns: 600px 1fr;
-	grid-template-rows: 1fr;
-	height: 100vh;
-	width: 100vw;
-	background: #ffffff;
+// @ts-ignore
+import styles from "./Login.module.css";
 
-	@media only screen and (max-width: 800px) {
-		position: normal;
-		grid-template-columns: 1fr;
-	}
-`;
-
-const contentCss = css`
-	padding: 100px;
-	box-sizing: border-box;
-	background: #ffffff;
-
-	@media only screen and (max-width: 800px) {
-		padding: 40px;
-		padding-top: 100px;
-	}
-`;
-
-const splashCss = css`
-	background-color: #0a3364;
-	background-image: url("/welcome.svg");
-	background-size: 900px;
-
-	@media only screen and (max-width: 800px) {
-		display: none;
-	}
-`;
+// TODO splash page should accept an image url for customization.
 
 export const Splash = (props) => (
-	<div className={splashCss}>{props.splash}</div>
+	<div className={styles.splash}>{props.splash}</div>
 );
 
 // Login returns the Login page layout with the login
@@ -63,8 +32,8 @@ export const Splash = (props) => (
 export default (props) => {
 	return (
 		<>
-			<div className={cx(rootCss, props.className)}>
-				<div className={contentCss}>{props.children}</div>
+			<div className={cx(styles.root, props.className)}>
+				<div className={styles.content}>{props.children}</div>
 				{props.splash}
 			</div>
 		</>

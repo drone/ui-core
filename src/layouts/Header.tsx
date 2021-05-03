@@ -15,54 +15,16 @@
 // @ts-nocheck
 
 import React from "react";
-import { css, cx } from "@emotion/css";
-import colors from "../shared/colors";
+import cx from "classnames";
 
-const rootCss = css`
-	display: grid;
-	grid-template-rows: auto 1fr;
-	grid-template-areas:
-		"header"
-		"content";
-
-	height: 100%;
-	width: 100%;
-
-	@media only screen and (max-width: 800px) {
-		display: block;
-		grid-template-rows: unset;
-		grid-template-areas: unset;
-		height: 100%;
-		width: 100%;
-	}
-`;
-
-const contentCss = css`
-	background: ${colors.gray50};
-	grid-area: content;
-	overflow-y: auto;
-	max-height: 100%;
-	min-height: 100%;
-	height: 0;
-
-	@media only screen and (max-width: 800px) {
-		display: block;
-		overflow-y: unset;
-		max-height: unset;
-		min-height: unset;
-		height: unset;
-	}
-`;
-
-const headerCss = css`
-	grid-area: header;
-`;
+// @ts-ignore
+import styles from "./Header.module.css";
 
 export default (props) => {
 	return (
-		<div className={cx(rootCss, props.className)}>
-			<div className={headerCss}>{props.header}</div>
-			<div className={contentCss}>{props.children}</div>
+		<div className={cx(styles.root, props.className)}>
+			<div className={styles.header}>{props.header}</div>
+			<div className={styles.content}>{props.children}</div>
 		</div>
 	);
 };

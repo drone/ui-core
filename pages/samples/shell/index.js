@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Shell from "../../../src/layouts/Shell2";
+import Shell from "../../../src/layouts/Shell";
 import HeaderLayout from "../../../src/layouts/Header";
 import Header from "../../../src/components/header";
 import { css } from "@emotion/css";

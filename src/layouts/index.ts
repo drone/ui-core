@@ -13,13 +13,11 @@
 // limitations under the License.
 
 import Login from "./Login";
-import Layout from "./Layout";
 import Shell from "./Shell";
 import Header from "./Header";
 
 export default {
 	Header,
 	Login,
-	Layout,
 	Shell,
 };

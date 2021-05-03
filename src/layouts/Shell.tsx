@@ -14,97 +14,38 @@
 
 // @ts-nocheck
 
-import React from "react";
-import { css, cx } from "@emotion/css";
-import colors from "../shared/colors";
+import React, { useState } from "react";
+import cx from "classnames";
 import Logo from "../assets/logos/Harness";
+import Menu from "../assets/icons/Menu";
 
-const rootCss = css`
-	display: grid;
-	grid-template-columns: 64px 1fr 64px;
-	grid-template-areas: "navbar content sidebar";
-
-	height: 100vh;
-	width: 100vw;
-
-	@media only screen and (max-width: 800px) {
-		grid-template-columns: unset;
-		grid-template-rows: 64px 1fr;
-		grid-template-areas:
-			"navbar"
-			"content";
-	}
-`;
-
-const logoCss = css`
-	appearance: none;
-	background: none;
-	border: none;
-	border-radius: none;
-	box-shadow: none;
-	box-sizing: border-box;
-	cursor: pointer;
-	outline: none;
-	margin: 0px;
-	padding: 0px;
-	min-height: 32px;
-
-	svg {
-		width: 32px;
-		height: 32px;
-	}
-`;
-
-const navbarCss = css`
-	grid-area: navbar;
-
-	background-color: #0a3364;
-	box-shadow: 3px 0 5px rgb(0 0 0 / 20%);
-	padding: 22px 0;
-	z-index: 1;
-
-	box-sizing: border-box;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 32px 1fr;
-
-	@media only screen and (max-width: 800px) {
-		padding: 0px 22px;
-		grid-template-rows: 1fr;
-		grid-template-columns: 32px 1fr;
-	}
-`;
-
-const sidebarCss = css`
-	grid-area: sidebar;
-	background: ${colors.gray50};
-	border-left: 1px solid rgba(0, 0, 0, 0.1);
-	padding: 22px 0;
-
-	@media only screen and (max-width: 800px) {
-		display: none;
-	}
-`;
-
-const contentCss = css`
-	grid-area: content;
-	background: #f8f9fa;
-`;
+// @ts-ignore
+import styles from "./Shell.module.css";
 
 // Shell returns the Application shell with the global
 // navigation and the sidebar.
 export default (props) => {
+	const [expanded, setExpanded] = useState(false);
+	const handleExpand = () => {
+		setExpanded(!expanded);
+	};
 	const logo = props.logo || <Logo />;
 	return (
-		<div className={cx(rootCss, props.className)}>
-			<div className={navbarCss}>
-				<button className={logoCss} onClick={props.onLogo}>
+		<div className={cx(styles.root, props.className)}>
+			<div className={styles.navbar}>
+				<button className={styles.expand} onClick={handleExpand}>
+					<Menu />
+				</button>
+				<button className={styles.logo} onClick={props.onLogo}>
 					{logo}
 				</button>
 				{props.navbar}
 			</div>
-			<div className={contentCss}>{props.children}</div>
-			<div className={sidebarCss}>{props.sidebar}</div>
+			<div className={cx(styles.drawer, { [styles.drawerExpanded]: expanded })}>
+				{props.drawer}
+			</div>
+			<div className={styles.content}>{props.children}</div>
+			<div className={styles.sidebar}>{props.sidebar}</div>
 		</div>
 	);
 };

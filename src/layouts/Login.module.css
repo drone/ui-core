@@ -1,0 +1,34 @@
+.root {
+	display: grid;
+	grid-template-columns: 600px 1fr;
+	grid-template-rows: 1fr;
+	height: 100vh;
+	width: 100vw;
+	background: #ffffff;
+
+	@media only screen and (max-width: 800px) {
+		position: normal;
+		grid-template-columns: 1fr;
+	}
+}
+
+.content {
+	padding: 100px;
+	box-sizing: border-box;
+	background: #ffffff;
+
+	@media only screen and (max-width: 800px) {
+		padding: 40px;
+		padding-top: 100px;
+	}
+}
+
+.splash {
+	background-color: #0a3364;
+	background-image: url("/welcome.svg");
+	background-size: 900px;
+
+	@media only screen and (max-width: 800px) {
+		display: none;
+	}
+}
