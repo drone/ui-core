@@ -1,0 +1,198 @@
+.root {
+	box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04),
+		0px 2px 4px rgba(96, 97, 112, 0.16);
+	border-radius: 4px;
+	height: 40px;
+	color: #fff;
+	border: none;
+	font-size: 14px;
+	font-family: Inter;
+	user-select: none;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+	outline: none;
+	background-color: var(--harness-primary-7);
+	padding: 0px 24px;
+
+	&:focus {
+		box-shadow: 0px 0px 0px 3px var(--harness-blue-100);
+	}
+
+	&:hover {
+		background-color: var(--harness-primary-5);
+	}
+
+	&:active {
+		background-color: var(--harness-primary-8);
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		color: var(--harness-gray-300);
+		background: var(--harness-gray-100);
+		box-shadow: none;
+	}
+}
+
+/*
+ * Default
+ */
+
+.root[data-appearance="default"][data-type="danger"] {
+	background: var(--harness-red-600);
+
+	&:focus {
+		box-shadow: 0px 0px 0px 3px var(--harness-red-200);
+	}
+
+	&:hover {
+		background: var(--harness-red-500);
+	}
+
+	&:active {
+		background: var(--harness-red-900);
+	}
+}
+
+.root[data-appearance="default"][data-type="warning"] {
+	background: var(--harness-yellow-600);
+
+	&:focus {
+		box-shadow: 0px 0px 0px 3px var(--harness-yellow-100);
+	}
+
+	&:hover {
+		background: var(--harness-yellow-500);
+	}
+
+	&:active {
+		background: var(--harness-yellow-700);
+	}
+}
+
+.root[data-appearance="default"][data-type="success"] {
+	background: var(--harness-green-700);
+
+	&:focus {
+		box-shadow: 0px 0px 0px 3px var(--harness-green-200);
+	}
+
+	&:hover {
+		background: var(--harness-green-600);
+	}
+
+	&:active {
+		background: var(--harness-green-800);
+	}
+}
+
+.root[data-appearance="default"]:disabled,
+.root[data-appearance="default"]:disabled:hover {
+	cursor: not-allowed;
+	color: var(--harness-gray-300);
+	background: var(--harness-gray-100);
+	border-color: transparent;
+	box-shadow: none;
+}
+
+/*
+ * rounded
+ */
+
+.rounded {
+	border-radius: 24px;
+}
+
+/*
+ * outline
+ */
+
+.root[data-appearance="outline"],
+.root[data-appearance="outline"]:hover,
+.root[data-appearance="outline"]:active {
+	background: transparent;
+}
+
+.root[data-appearance="outline"][data-type="default"] {
+	color: var(--harness-primary-7);
+	border: 1px solid var(--harness-primary-7);
+
+	&:focus {
+		box-shadow: 0px 0px 0px 3px var(--harness-blue-100);
+	}
+
+	&:hover {
+		border-color: var(--harness-primary-5);
+		color: var(--harness-primary-5);
+	}
+
+	&:active {
+		border-color: var(--harness-primary-8);
+		color: var(--harness-primary-8);
+	}
+}
+
+.root[data-appearance="outline"][data-type="danger"] {
+	color: var(--harness-red-600);
+	border: 1px solid var(--harness-red-600);
+
+	&:focus {
+		box-shadow: 0px 0px 0px 3px var(--harness-red-200);
+	}
+
+	&:hover {
+		border-color: var(--harness-red-500);
+		color: var(--harness-red-500);
+	}
+
+	&:active {
+		border-color: var(--harness-red-900);
+		color: var(--harness-red-900);
+	}
+}
+
+.root[data-appearance="outline"][data-type="warning"] {
+	color: var(--harness-yellow-600);
+	border: 1px solid var(--harness-yellow-600);
+
+	&:focus {
+		box-shadow: 0px 0px 0px 3px var(--harness-yellow-100);
+	}
+
+	&:hover {
+		border-color: var(--harness-yellow-500);
+		color: var(--harness-yellow-500);
+	}
+
+	&:active {
+		border-color: var(--harness-yellow-700);
+		color: var(--harness-yellow-700);
+	}
+}
+
+.root[data-appearance="outline"][data-type="success"] {
+	color: var(--harness-green-700);
+	border: 1px solid var(--harness-green-700);
+
+	&:focus {
+		box-shadow: 0px 0px 0px 3px var(--harness-green-200);
+	}
+
+	&:hover {
+		border-color: var(--harness-green-600);
+		color: var(--harness-green-600);
+	}
+
+	&:active {
+		border-color: var(--harness-green-800);
+		color: var(--harness-green-800);
+	}
+}
+
+.root[data-appearance="outline"]:hover:disabled,
+.root[data-appearance="outline"]:disabled {
+	background-color: transparent;
+	border-color: var(--harness-gray-200);
+	color: var(--harness-gray-200);
+	box-shadow: none;
+}

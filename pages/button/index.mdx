@@ -1,109 +1,108 @@
 import Button from "../../src/components/button";
 import Playground from "../../docs/playground";
 
-# Button
+# Default
 
-## Primary
+The default form of a button.
 
-<Button>Button</Button>
+<Playground
+  scope={{ Button }}
+  code={`<Button>Button</Button>`}
+/>
 
-```jsx
-<Button>Button</Button>
-```
+# Rounded
 
-## Disabled
+The button has a rounded appearance:
 
-<Button disabled="true">Disabled</Button>
+<Playground
+  scope={{ Button }}
+  code={`<Button rounded={true}>Button</Button>`}
+/>
 
-```jsx
-<Button disabled="true">Disabled</Button>
-```
+# Rounded
 
-## Rounded
+The button has an outlined appearance:
 
-<Button rounded="true">Rounded</Button>
+<Playground
+  scope={{ Button }}
+  code={`() => (
+      <>
+        <Button rounded={false} appearance="outline">Button</Button>
+        <Button rounded={true}  appearance="outline">Button</Button>
+      </>
+);`}
+/>
 
-```jsx
-<Button rounded="true">Rounded</Button>
-```
+# Disabled
 
-## Outline
+The button is disabled:
 
-<Button secondary="true">Outline</Button>
+<Playground
+  scope={{ Button }}
+  code={`() => (
+      <>
+        <Button rounded={false} appearance="default" disabled={true}>Button</Button>
+        <Button rounded={true}  appearance="default" disabled={true}>Button</Button>
+        <Button rounded={false} appearance="outline" disabled={true}>Button</Button>
+        <Button rounded={true}  appearance="outline" disabled={true}>Button</Button>
+      </>
+);`}
+/>
 
-```jsx
-<Button secondary="true">Outline</Button>
-```
-
-## Outline + Rounded
-
-<Button rounded="true" secondary="true">Outline</Button>
-
-```jsx
-<Button rounded="true" secondary="true">Outline</Button>
-```
-
-## Outline + Rounded + Disabled
-
-<Button rounded="true" secondary="true" disabled="true">Disabled</Button>
-
-```jsx
-<Button rounded="true" secondary="true" disabled="true">Disabled</Button>
-```
+# Type
 
 ## Default
 
-<Button rounded="false" outline="false">Default</Button>
-<Button rounded="true"  outline="false">Default</Button>
-<Button rounded="false" outline="true">Default</Button>
-<Button rounded="true"  outline="true">Default</Button>
-
-```jsx
-<Button rounded="false" outline="false">Default</Button>
-<Button rounded="true"  outline="false">Default</Button>
-<Button rounded="false" outline="true">Default</Button>
-<Button rounded="true"  outline="true">Default</Button>
-```
-
+<Playground
+  scope={{ Button }}
+  code={`() => (
+      <>
+        <Button rounded={false} appearance="default">Button</Button>
+        <Button rounded={true}  appearance="default">Button</Button>
+        <Button rounded={false} appearance="outline">Button</Button>
+        <Button rounded={true}  appearance="outline">Button</Button>
+      </>
+);`}
+/>
 
 ## Success
 
-<Button rounded="false" outline="false" intent="success">Success</Button>
-<Button rounded="true"  outline="false" intent="success">Success</Button>
-<Button rounded="false" outline="true"  intent="success">Success</Button>
-<Button rounded="true"  outline="true"  intent="success">Success</Button>
-
-```jsx
-<Button rounded="false" outline="false" intent="success">Success</Button>
-<Button rounded="true"  outline="false" intent="success">Success</Button>
-<Button rounded="false" outline="true"  intent="success">Success</Button>
-<Button rounded="true"  outline="true"  intent="success">Success</Button>
-```
-
-## Warning
-
-<Button rounded="false" outline="false" intent="warning">Warning</Button>
-<Button rounded="true"  outline="false" intent="warning">Warning</Button>
-<Button rounded="false" outline="true"  intent="warning">Warning</Button>
-<Button rounded="true"  outline="true"  intent="warning">Warning</Button>
-
-```jsx
-<Button rounded="false" outline="false" intent="warning">Warning</Button>
-<Button rounded="true"  outline="false" intent="warning">Warning</Button>
-<Button rounded="false" outline="true"  intent="warning">Warning</Button>
-<Button rounded="true"  outline="true"  intent="warning">Warning</Button>
-```
+<Playground
+  scope={{ Button }}
+  code={`() => (
+      <>
+        <Button rounded={false} appearance="default" type="success">Button</Button>
+        <Button rounded={true}  appearance="default" type="success">Button</Button>
+        <Button rounded={false} appearance="outline" type="success">Button</Button>
+        <Button rounded={true}  appearance="outline" type="success">Button</Button>
+      </>
+);`}
+/>
 
 ## Danger
 
-<Button rounded="false" outline="false" intent="danger">Danger</Button>
-<Button rounded="true"  outline="false" intent="danger">Danger</Button>
-<Button rounded="false" outline="true"  intent="danger">Danger</Button>
-<Button rounded="true"  outline="true"  intent="danger">Danger</Button>
+<Playground
+  scope={{ Button }}
+  code={`() => (
+      <>
+        <Button rounded={false} appearance="default" type="danger">Button</Button>
+        <Button rounded={true}  appearance="default" type="danger">Button</Button>
+        <Button rounded={false} appearance="outline" type="danger">Button</Button>
+        <Button rounded={true}  appearance="outline" type="danger">Button</Button>
+      </>
+);`}
+/>
 
-```jsx
-<Button rounded="false" outline="false" intent="danger">Danger</Button>
-<Button rounded="true"  outline="false" intent="danger">Danger</Button>
-<Button rounded="false" outline="true"  intent="danger">Danger</Button>
-<Button rounded="true"  outline="true"  intent="danger">Danger</Button>
-```
+## Warning
+
+<Playground
+  scope={{ Button }}
+  code={`() => (
+      <>
+        <Button rounded={false} appearance="default" type="warning">Button</Button>
+        <Button rounded={true}  appearance="default" type="warning">Button</Button>
+        <Button rounded={false} appearance="outline" type="warning">Button</Button>
+        <Button rounded={true}  appearance="outline" type="warning">Button</Button>
+      </>
+);`}
+/>
