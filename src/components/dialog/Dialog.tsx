@@ -14,6 +14,7 @@
 
 import React from "react";
 import cx from "classnames";
+import Icon from "../../assets/icons/Close";
 import * as RadixDialog from "@radix-ui/react-dialog";
 
 // @ts-ignore
@@ -24,9 +25,11 @@ const Dialog: React.FC<DialogProps> = (props) => (
 		<RadixDialog.Overlay className={styles.overlay} />
 		<RadixDialog.Content className={styles.dialog}>
 			{props.children}
-			{props.hideClose ? undefined : (
-				<RadixDialog.Close>Close</RadixDialog.Close>
-			)}
+			{props.showClose ? (
+				<RadixDialog.Close className={styles.close}>
+					<Icon />
+				</RadixDialog.Close>
+			) : undefined}
 		</RadixDialog.Content>
 	</RadixDialog.Root>
 );
@@ -34,7 +37,7 @@ const Dialog: React.FC<DialogProps> = (props) => (
 export interface DialogProps {
 	className?: string;
 	open?: boolean;
-	hideClose?: boolean;
+	showClose?: boolean;
 	onOpenChange(open: boolean): void;
 }
 

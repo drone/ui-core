@@ -10,11 +10,17 @@
 	min-width: 200px;
 	max-width: fit-content;
 	max-height: 85vh;
+	outline: none;
 	padding: 24px;
 	margin-top: -5vh;
 	background-color: white;
 	border-radius: 6px;
 	z-index: 999;
+}
+
+.content {
+	outline: none;
+	position: relative;
 }
 
 .overlay {
@@ -25,4 +31,33 @@
 	bottom: 0;
 	left: 0;
 	z-index: 999;
+}
+
+.close {
+	appearance: none;
+	background: none;
+	border: none;
+	outline: none;
+	padding: 0px;
+	margin: 0px;
+	cursor: pointer;
+
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	color: var(--harness-gray-300);
+
+	&:hover {
+		color: var(--harness-gray-200);
+	}
+
+	&:focus {
+		outline: var(--harness-blue-100);
+		border-radius: 6px;
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+	}
 }
