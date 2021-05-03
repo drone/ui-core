@@ -4,23 +4,21 @@
 		0px 20px 32px rgba(96, 97, 112, 0.24);
 	border-radius: 16px;
 	position: fixed;
-	top: 50%;
+	top: 150px;
 	left: 50%;
-	transform: translate(-50%, -50%);
-	min-width: 200px;
-	max-width: fit-content;
+	transform: translate(-50%);
+	margin-top: -5vh;
+	min-width: 600px;
 	max-height: 85vh;
 	outline: none;
 	padding: 24px;
-	margin-top: -5vh;
 	background-color: white;
 	border-radius: 6px;
 	z-index: 999;
-}
-
-.content {
-	outline: none;
-	position: relative;
+	width: 600px;
+	height: auto;
+	max-height: calc(80vh - 150px);
+	overflow-y: auto;
 }
 
 .overlay {
