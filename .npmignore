@@ -1,0 +1,15 @@
+.git/
+.github
+.vscode
+.next
+.drone.yml
+.gitignore
+docs/
+node_modules/
+out/
+pages/
+public/
+next-env.d.ts
+next.config.js
+tsconfig.json
+NOTES.md
