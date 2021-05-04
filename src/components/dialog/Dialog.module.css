@@ -3,6 +3,7 @@
 	box-shadow: 0px 2px 8px rgba(40, 41, 61, 0.08),
 		0px 20px 32px rgba(96, 97, 112, 0.24);
 	border-radius: 16px;
+	box-sizing: border-box;
 	position: fixed;
 	top: 150px;
 	left: 50%;
@@ -19,6 +20,42 @@
 	height: auto;
 	max-height: calc(80vh - 150px);
 	overflow-y: auto;
+
+	&[data-width="small"] {
+		width: 400px;
+		max-width: 90vw;
+	}
+
+	&[data-width="medium"] {
+		width: 600px;
+		max-width: 90vw;
+	}
+
+	&[data-width="large"] {
+		width: 800px;
+		max-width: 90vw;
+	}
+
+	&[data-width="xlarge"] {
+		width: 1000px;
+		max-width: 90vw;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.dialog[data-width="small"],
+	.dialog[data-width="medium"],
+	.dialog[data-width="large"],
+	.dialog[data-width="xlarge"] {
+		min-width: unset;
+		max-width: unset;
+		left: 20px;
+		top: 30px;
+		right: 20px;
+		width: unset;
+		transform: unset;
+		margin-top: unset;
+	}
 }
 
 .overlay {

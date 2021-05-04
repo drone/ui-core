@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React from "react";
+import React, { ReactNode } from "react";
 import cx from "classnames";
 import Icon from "../../assets/icons/Close";
 import * as RadixDialog from "@radix-ui/react-dialog";
@@ -23,7 +23,11 @@ import styles from "./Dialog.module.css";
 const Dialog: React.FC<DialogProps> = (props) => (
 	<RadixDialog.Root open={props.open} onOpenChange={props.onOpenChange}>
 		<RadixDialog.Overlay className={styles.overlay} />
-		<RadixDialog.Content className={styles.dialog}>
+		<RadixDialog.Content
+			className={styles.dialog}
+			data-width={props.width || "medium"}
+		>
+			{props.heading ? <div>{props.heading}</div> : undefined}
 			{props.children}
 			{props.showClose ? (
 				<RadixDialog.Close className={styles.close}>
@@ -35,9 +39,37 @@ const Dialog: React.FC<DialogProps> = (props) => (
 );
 
 export interface DialogProps {
+	/**
+	 * Add a classname to the dialog.
+	 */
 	className?: string;
+
+	/**
+	 * The controlled open state of the dialog. Must be used in
+	 * conjunction with onOpenChange.
+	 */
 	open?: boolean;
+
+	/**
+	 * Heading for the modal dialog.
+	 */
+	heading?: ReactNode;
+
+	/**
+	 * Width of the dialog. The recommended way to specify dialog
+	 * width is using named size options.
+	 */
+	width?: "small" | "medium" | "large" | "xlarge";
+
+	/**
+	 * Do not use. This prop has been deprecated.
+	 */
 	showClose?: boolean;
+
+	/**
+	 * Callback function called when the modal changes state.
+	 * @param open
+	 */
 	onOpenChange(open: boolean): void;
 }
 

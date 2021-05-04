@@ -21,3 +21,23 @@ The default form of a modal dialog.
   )
 }`}
 />
+
+
+# Width
+
+The width of the modal can be specified in different ways using named size options.
+
+<Playground
+  scope={{ Dialog, Button, useState }}
+  code={`() => {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+        <Button onClick={() => setOpen(true)}>Open Dialog</Button>
+        <Dialog open={open} onOpenChange={() => setOpen(false)} width="xlarge">
+            <div>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</div>
+        </Dialog>
+    </>
+  )
+}`}
+/>
