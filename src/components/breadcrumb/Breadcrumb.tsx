@@ -20,8 +20,8 @@ import cx from "classnames";
 // @ts-ignore
 import styles from "./Breadcrumb.module.css";
 
-export default (props) => {
-	const separator = props.separator || <Separator />;
+export const Breadcrumb = (props) => {
+	const separator = props.separator || <BreadcrumbSeparator />;
 	const children = props.children.reduce((accumulator, item) => {
 		accumulator.push(item);
 		accumulator.push(separator);
@@ -30,7 +30,7 @@ export default (props) => {
 	return <div className={cx(styles.root, props.className)}>{children}</div>;
 };
 
-const Separator = (props) => (
+export const BreadcrumbSeparator = (props) => (
 	<svg
 		width="24"
 		height="24"

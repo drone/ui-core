@@ -14,14 +14,14 @@
 
 // @ts-nocheck
 
-import { useRef } from "react";
-import Input from "../../components/input";
+import React, { useRef } from "react";
+import { Input } from "../../components/input/Input";
 import Harness from "../../assets/logos/HarnessLarge";
 
 // @ts-ignore
 import styles from "./Register.module.css";
 
-export default (props) => {
+export const RegisterFragment = (props) => {
 	const usernameElem = useRef(null);
 	const passwordElem = useRef(null);
 	const handleRegister = (e) => {

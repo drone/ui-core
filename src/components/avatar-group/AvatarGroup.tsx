@@ -16,12 +16,12 @@
 
 import React from "react";
 import cx from "classnames";
-import Avatar from "../avatar";
+import { Avatar } from "../avatar/Avatar";
 
 // @ts-ignore
 import styles from "./AvatarGroup.module.css";
 
-const AvatarGroup: React.FC<AvatarGroupProps> = (props) => {
+export const AvatarGroup: React.FC<AvatarGroupProps> = (props) => {
 	const count = props.maxCount || 5;
 	const size = props.size || 32;
 	return (
@@ -61,7 +61,7 @@ export interface AvatarGroupProps {
 	/**
 	 * Defines the size of the avatar.
 	 */
-	size?: number;
+	size?: string;
 
 	/**
 	 * The maximum number of avatars allowed in the list. Defaults to 5.
@@ -83,5 +83,3 @@ export interface AvatarGroupProps {
 	 */
 	onMoreClick?: (event: React.MouseEvent) => void;
 }
-
-export default AvatarGroup;

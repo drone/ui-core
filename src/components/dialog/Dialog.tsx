@@ -20,7 +20,7 @@ import * as RadixDialog from "@radix-ui/react-dialog";
 // @ts-ignore
 import styles from "./Dialog.module.css";
 
-const Dialog: React.FC<DialogProps> = (props) => (
+export const Dialog: React.FC<DialogProps> = (props) => (
 	<RadixDialog.Root open={props.open} onOpenChange={props.onOpenChange}>
 		<RadixDialog.Overlay className={styles.overlay} />
 		<RadixDialog.Content
@@ -72,5 +72,3 @@ export interface DialogProps {
 	 */
 	onOpenChange(open: boolean): void;
 }
-
-export default Dialog;

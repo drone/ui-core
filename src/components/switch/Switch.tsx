@@ -19,7 +19,7 @@ import * as RadixSwitch from "@radix-ui/react-switch";
 // @ts-ignore
 import styles from "./Switch.module.css";
 
-const Switch: React.FC<SwitchProps> = (props) => (
+export const Switch: React.FC<SwitchProps> = (props) => (
 	<RadixSwitch.Root
 		className={cx(styles.root, props.className)}
 		onCheckedChange={props.onCheckedChange}
@@ -36,5 +36,3 @@ export interface SwitchProps {
 	checked?: boolean;
 	disabled?: boolean;
 }
-
-export default Switch;

@@ -1,5 +1,5 @@
-import Button from "../../src/components/button";
-import Menu, { MenuItem } from "../../src/components/menu";
+import { Button } from "../../src/components/button/Button";
+import { Menu, MenuItem } from "../../src/components/menu/Menu";
 import Playground from "../../docs/playground";
 
 # Default

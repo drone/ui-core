@@ -33,7 +33,7 @@ export interface BadgeProps {
 	max?: number;
 }
 
-const Badge: React.FC<BadgeProps> = (props) => {
+export const Badge: React.FC<BadgeProps> = (props) => {
 	const max = props.max || 99;
 	const appearance = props.appearance || "default";
 	return (
@@ -47,5 +47,3 @@ const Badge: React.FC<BadgeProps> = (props) => {
 		</span>
 	);
 };
-
-export default Badge;

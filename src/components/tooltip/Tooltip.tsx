@@ -19,7 +19,7 @@ import * as RadixTooltip from "@radix-ui/react-tooltip";
 // @ts-ignore
 import styles from "./Tooltip.module.css";
 
-const Tooltip: React.FC<TooltipProps> = (props) => (
+export const Tooltip: React.FC<TooltipProps> = (props) => (
 	<RadixTooltip.Root delayDuration={200}>
 		<RadixTooltip.Trigger className={styles.trigger}>
 			{props.children}
@@ -38,5 +38,3 @@ export interface TooltipProps {
 	content?: string;
 	children: ReactNode;
 }
-
-export default Tooltip;

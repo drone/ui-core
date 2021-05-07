@@ -20,7 +20,7 @@ import cx from "classnames";
 // @ts-ignore
 import styles from "./Select.module.css";
 
-export default React.forwardRef((props, ref) => (
+export const Select = React.forwardRef((props, ref) => (
 	<select
 		ref={ref}
 		onClick={props.onClick}

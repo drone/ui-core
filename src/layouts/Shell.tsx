@@ -24,7 +24,7 @@ import styles from "./Shell.module.css";
 
 // Shell returns the Application shell with the global
 // navigation and the sidebar.
-export default (props) => {
+export const ShellLayout = (props) => {
 	const [expanded, setExpanded] = useState(false);
 	const handleExpand = () => {
 		setExpanded(!expanded);

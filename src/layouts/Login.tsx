@@ -29,7 +29,7 @@ export const Splash = (props) => (
 // Login returns the Login page layout with the login
 // form left-aligned and the splash screen taking up
 // the main body of the page.
-export default (props) => {
+export const LoginLayout = (props) => {
 	return (
 		<>
 			<div className={cx(styles.root, props.className)}>

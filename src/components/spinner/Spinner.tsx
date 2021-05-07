@@ -14,7 +14,9 @@
 
 // @ts-nocheck
 
-export default (props) => (
+import React from "react";
+
+export const Spinner = (props) => (
 	<svg
 		width={props.size || "32px"}
 		height={props.size || "32px"}

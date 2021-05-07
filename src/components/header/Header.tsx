@@ -20,7 +20,7 @@ import cx from "classnames";
 // @ts-ignore
 import styles from "./Header.module.css";
 
-export default (props) => {
+export const Header = (props) => {
 	return (
 		<div className={cx(styles.root, props.className)}>
 			<h1>{props.title}</h1>

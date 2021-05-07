@@ -1,4 +1,4 @@
-import Tabs, { Tab, TabPanel, TabList } from "../../src/components/tabs";
+import { Tabs, Tab, TabPanel, TabList } from "../../src/components/tabs/Tabs";
 import Playground from "../../docs/playground";
 import { useState } from "react";
 

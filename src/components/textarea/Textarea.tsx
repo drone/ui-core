@@ -20,7 +20,7 @@ import cx from "classnames";
 // @ts-ignore
 import styles from "./Textarea.module.css";
 
-export default React.forwardRef((props, ref) => (
+export const Textarea = React.forwardRef((props, ref) => (
 	<textarea
 		className={cx(styles.root, props.className)}
 		ref={ref}

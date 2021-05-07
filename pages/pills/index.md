@@ -1,4 +1,4 @@
-import Pills, { Pill, PillPanel, PillList } from "../../src/components/pills";
+import { Pills, Pill, PillPanel, PillList } from "../../src/components/pills/Pills";
 import Playground from "../../docs/playground";
 import { useState } from "react";
 

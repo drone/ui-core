@@ -20,7 +20,7 @@ import cx from "classnames";
 // @ts-ignore
 import styles from "./Input.module.css";
 
-export default React.forwardRef((props, ref) => (
+export const Input = React.forwardRef((props, ref) => (
 	<input
 		type={props.type || "text"}
 		ref={ref}

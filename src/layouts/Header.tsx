@@ -20,7 +20,7 @@ import cx from "classnames";
 // @ts-ignore
 import styles from "./Header.module.css";
 
-export default (props) => {
+export const HeaderLayout = (props) => {
 	return (
 		<div className={cx(styles.root, props.className)}>
 			<div className={styles.header}>{props.header}</div>

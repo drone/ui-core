@@ -15,7 +15,7 @@
 // @ts-nocheck
 
 import React from "react";
-import Button from "../button";
+import { Button } from "../button/Button";
 import Icon from "../../assets/icons/ChevronDown";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
@@ -30,7 +30,7 @@ export const MenuItem = (props) => {
 	);
 };
 
-export default (props) => {
+export const Menu = (props) => {
 	return (
 		<DropdownMenu.Root className={styles.root}>
 			<DropdownMenu.Trigger className={styles.trigger}>

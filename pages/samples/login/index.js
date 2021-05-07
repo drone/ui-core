@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import Login, {Splash} from "../../../src/layouts/Login";
-import LoginForm from "../../../src/fragments/login";
+import { LoginLayout, Splash } from "../../../src/layouts/Login";
+import { LoginFragment } from "../../../src/fragments/login/Login";
 
 export default () => {
 	const router = useRouter()
@@ -15,8 +15,8 @@ export default () => {
 		router.push("/")
 	}
 	return (
-        <Login splash={<Splash />}>
-			<LoginForm onLogin={handleLogin} onRegister={handleRegister} onLogo={handleLogo} />
-        </Login>
+        <LoginLayout splash={<Splash />}>
+			<LoginFragment onLogin={handleLogin} onRegister={handleRegister} onLogo={handleLogo} />
+        </LoginLayout>
     );
 }

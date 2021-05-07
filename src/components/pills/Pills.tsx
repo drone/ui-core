@@ -51,7 +51,7 @@ export const PillPanel = (props) => {
 	);
 };
 
-export default (props) => {
+export const Pills = (props) => {
 	return (
 		<Tabs.Root
 			className={classnames(styles.root, props.className)}

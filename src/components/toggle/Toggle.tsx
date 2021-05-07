@@ -46,7 +46,7 @@ export const ToggleItem = (props) => {
 	);
 };
 
-export default (props) => {
+export const Toggle = (props) => {
 	return (
 		<ToggleGroup.Root
 			className={styles.group}

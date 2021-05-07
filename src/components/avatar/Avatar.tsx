@@ -55,7 +55,7 @@ export interface AvatarProps {
 	appearance?: "circle" | "square";
 }
 
-const Avatar: React.FC<AvatarProps> = (props) => (
+export const Avatar: React.FC<AvatarProps> = (props) => (
 	<RadixAvatar.Root
 		className={cx(styles.root, props.className, {
 			[styles.square]: props.appearance == "square",
@@ -82,5 +82,3 @@ const Avatar: React.FC<AvatarProps> = (props) => (
 		</RadixAvatar.Fallback>
 	</RadixAvatar.Root>
 );
-
-export default Avatar;

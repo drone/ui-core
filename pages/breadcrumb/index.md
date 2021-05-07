@@ -1,4 +1,4 @@
-import Breadcrumb from "../../src/components/breadcrumb";
+import { Breadcrumb } from "../../src/components/breadcrumb/Breadcrumb";
 import Playground from "../../docs/playground";
 
 # Default

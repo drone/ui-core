@@ -17,7 +17,7 @@
 import React from "react";
 import cx from "classnames";
 import Checkmark from "../../assets/icons/Checkmark";
-import * as Checkbox from "@radix-ui/react-checkbox";
+import * as RadixCheckbox from "@radix-ui/react-checkbox";
 
 // @ts-ignore
 import styles from "./Checkbox.module.css";
@@ -30,14 +30,14 @@ export interface CheckboxProps {
 	ref?: any;
 }
 
-export default React.forwardRef((props, ref) => (
-	<Checkbox.Root
+export const Checkbox = React.forwardRef((props, ref) => (
+	<RadixCheckbox.Root
 		className={cx(styles.root, props.className)}
 		onCheckedChange={props.onCheckedChange}
 		disabled={props.disabled}
 		checked={props.checked}
 		ref={ref}
 	>
-		<Checkbox.Indicator as={Checkmark} />
-	</Checkbox.Root>
+		<RadixCheckbox.Indicator as={Checkmark} />
+	</RadixCheckbox.Root>
 ));

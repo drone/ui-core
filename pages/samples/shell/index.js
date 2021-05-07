@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import Shell from "../../../src/layouts/Shell";
-import HeaderLayout from "../../../src/layouts/Header";
-import Header from "../../../src/components/header";
+import { ShellLayout } from "../../../src/layouts/Shell";
+import { HeaderLayout } from "../../../src/layouts/Header";
+import { Header } from "../../../src/components/header/Header";
 import { css } from "@emotion/css";
 
 const contentCss = css`
@@ -42,7 +42,7 @@ export default () => {
     const header = <Header title="Pipelines" />;
     const drawer = <div>test</div>;
 	return (
-        <Shell onLogo={handleLogo} drawer={drawer}>
+        <ShellLayout onLogo={handleLogo} drawer={drawer}>
             <HeaderLayout header={header}>
                 <div className={contentCss}>
                     <div className={cardCss}>
@@ -56,6 +56,6 @@ export default () => {
                     </div>
                 </div>
             </HeaderLayout>
-        </Shell>
+        </ShellLayout>
     );
 }

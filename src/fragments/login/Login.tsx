@@ -14,8 +14,8 @@
 
 // @ts-nocheck
 
-import { useRef } from "react";
-import Input from "../../components/input";
+import React, { useRef } from "react";
+import { Input } from "../../components/input/Input";
 import Harness from "../../assets/logos/HarnessLarge";
 
 // @ts-ignore
@@ -25,7 +25,7 @@ import styles from "./Login.module.css";
 // TODO use harness color variables
 // TODO use harness spacing variables
 
-export default (props) => {
+export const LoginFragment = (props) => {
 	const usernameElem = useRef(null);
 	const passwordElem = useRef(null);
 	const handleLogin = (e) => {

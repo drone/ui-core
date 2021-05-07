@@ -16,50 +16,50 @@
 
 import React from "react";
 import classnames from "classnames";
-import * as Tabs from "@radix-ui/react-tabs";
+import * as RadixTabs from "@radix-ui/react-tabs";
 
 // @ts-ignore
 import styles from "./Tabs.module.css";
 
 export const Tab = (props) => {
 	return (
-		<Tabs.Tab
+		<RadixTabs.Tab
 			className={classnames(styles.tab, props.className)}
 			value={props.value}
 		>
 			{props.children}
-		</Tabs.Tab>
+		</RadixTabs.Tab>
 	);
 };
 
 export const TabList = (props) => {
 	return (
-		<Tabs.List className={classnames(styles.list, props.className)}>
+		<RadixTabs.List className={classnames(styles.list, props.className)}>
 			{props.children}
-		</Tabs.List>
+		</RadixTabs.List>
 	);
 };
 
 export const TabPanel = (props) => {
 	return (
-		<Tabs.Panel
+		<RadixTabs.Panel
 			className={classnames(styles.panel, props.className)}
 			value={props.value}
 		>
 			{props.children}
-		</Tabs.Panel>
+		</RadixTabs.Panel>
 	);
 };
 
-export default (props) => {
+export const Tabs = (props) => {
 	return (
-		<Tabs.Root
+		<RadixTabs.Root
 			className={classnames(styles.root, props.className)}
 			defaultValue={props.default}
 			value={props.value}
 			onValueChange={props.onValueChange}
 		>
 			{props.children}
-		</Tabs.Root>
+		</RadixTabs.Root>
 	);
 };
