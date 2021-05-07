@@ -1,6 +1,6 @@
 {
 	"name": "drone-ui-core",
-	"version": "1.0.0-alpha.1.0",
+	"version": "1.0.0-alpha.2.0",
 	"main": "dist/index.js",
 	"module": "dist/index.module.js",
 	"style": "dist/index.css",
