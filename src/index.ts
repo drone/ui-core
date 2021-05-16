@@ -40,11 +40,16 @@ export { Pills, Pill, PillPanel, PillList } from "./components/pills/Pills";
 export { Select } from "./components/select/Select";
 export { Snippet } from "./components/snippet/Snippet";
 export { Spinner } from "./components/spinner/Spinner";
+export { SubHeader } from "./components/subheader/Subheader";
 export { Switch } from "./components/switch/Switch";
 export { Tab, Tabs, TabList, TabPanel } from "./components/tabs/Tabs";
 export { Textarea } from "./components/textarea/Textarea";
 export { Toggle, ToggleItem } from "./components/toggle/Toggle";
 export { Tooltip } from "./components/tooltip/Tooltip";
+export {
+	UtilityBar,
+	UtilityBarButton,
+} from "./components/utilitybar/Utilitybar";
 
 //
 // Export Fragments

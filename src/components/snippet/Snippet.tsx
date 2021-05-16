@@ -38,7 +38,10 @@ export const Snippet = (props) => {
 
 	return (
 		<div className={cx(styles.root, props.className)}>
-			<div ref={contentElem} className={styles.content}>
+			<div
+				ref={contentElem}
+				className={cx(styles.content, props.wrap && styles.wrap)}
+			>
 				{props.text}
 			</div>
 			<button onClick={handleCopy} className={styles.button} alt="Copy">

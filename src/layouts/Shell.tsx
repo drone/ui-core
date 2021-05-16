@@ -18,6 +18,9 @@ import React, { useState } from "react";
 import cx from "classnames";
 import Logo from "../assets/logos/Harness";
 import Menu from "../assets/icons/Menu";
+import { UtilityBar } from "../components/utilitybar/Utilitybar";
+import { SideBar } from "../components/sidebar/Sidebar";
+import { Avatar } from "../components/avatar/Avatar";
 
 // @ts-ignore
 import styles from "./Shell.module.css";
@@ -31,21 +34,31 @@ export const ShellLayout = (props) => {
 	};
 	const logo = props.logo || <Logo />;
 	return (
-		<div className={cx(styles.root, props.className)}>
-			<div className={styles.navbar}>
-				<button className={styles.expand} onClick={handleExpand}>
-					<Menu />
-				</button>
-				<button className={styles.logo} onClick={props.onLogo}>
-					{logo}
-				</button>
-				{props.navbar}
-			</div>
-			<div className={cx(styles.drawer, { [styles.drawerExpanded]: expanded })}>
-				{props.drawer}
-			</div>
+		<div
+			className={cx(
+				styles.root,
+				{ [styles.nodrawer]: !props.drawer },
+				props.className
+			)}
+		>
+			<SideBar
+				expandable={!!props.drawer}
+				logoSelected={props.logoSelected}
+				avatarSelected={props.avatarSelected}
+				avatar={props.avatar}
+				onExpand={handleExpand}
+				onLogo={props.onLogo}
+				onAvatar={props.onAvatar}
+			/>
+			{props.drawer && (
+				<div
+					className={cx(styles.drawer, { [styles.drawerExpanded]: expanded })}
+				>
+					{props.drawer}
+				</div>
+			)}
 			<div className={styles.content}>{props.children}</div>
-			<div className={styles.sidebar}>{props.sidebar}</div>
+			{props.utilitybar || <UtilityBar />}
 		</div>
 	);
 };

@@ -1,0 +1,48 @@
+.root {
+	grid-area: utilitybar;
+	background: var(--harness-gray-50);
+	border-left: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 32px 12px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 32px;
+
+	@media only screen and (max-width: 800px) {
+		display: none;
+	}
+}
+
+.centered {
+	justify-content: center;
+}
+
+.button {
+	display: block;
+	appearance: none;
+	border: none;
+	border-radius: 3px;
+	background: transparent;
+	color: var(--harness-gray-600);
+	cursor: pointer;
+	padding: 2px 0px;
+	user-select: none;
+	outline: none;
+	transition: color ease-in 0.25s, box-shadow ease-in 0.25s;
+
+	&:focus {
+		box-shadow: 0px 0px 0px 2px rgb(0 0 0 / 10%);
+	}
+}
+
+.button:hover {
+	color: var(--harness-gray-400);
+}
+
+.button:active {
+	color: var(--harness-gray-900);
+}
+
+.button svg {
+	width: 22px;
+	height: 22px;
+}

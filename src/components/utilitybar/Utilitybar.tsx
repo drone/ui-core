@@ -18,31 +18,25 @@ import React from "react";
 import cx from "classnames";
 
 // @ts-ignore
-import styles from "./Login.module.css";
+import styles from "./Utilitybar.module.css";
 
-// TODO splash page should accept an image url for customization.
-
-export const Splash = (props) => (
-	<div
-		className={styles.splash}
-		style={{
-			backgroundColor: props.backgroundColor,
-			backgroundImage: props.backgroundImage,
-			backgroundSize: props.backgroundSize,
-		}}
-	>
-		{props.splash}
-	</div>
-);
-
-// Login returns the Login page layout with the login
-// form left-aligned and the splash screen taking up
-// the main body of the page.
-export const LoginLayout = (props) => {
+export const UtilityBar = (props) => {
 	return (
-		<div className={cx(styles.root, props.className)}>
-			<div className={styles.content}>{props.children}</div>
-			{props.splash}
-		</div>
+		<div className={cx(styles.root, props.className)}>{props.children}</div>
+	);
+};
+
+export const UtilityBarButton = (props) => {
+	return (
+		<button
+			className={cx(
+				styles.button,
+				props.className,
+				props.centered && styles.centered
+			)}
+			onClick={props.onClick}
+		>
+			{props.icon}
+		</button>
 	);
 };

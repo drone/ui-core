@@ -16,43 +16,36 @@
 
 import React from "react";
 import cx from "classnames";
-import { Info, Warn, Success, Danger } from "./icons";
+
+import Logo from "../../assets/logos/Harness";
+import Menu from "../../assets/icons/Menu";
 
 // @ts-ignore
-import styles from "./Message.module.css";
+import styles from "./Sidebar.module.css";
 
-// Renders the Message component.
-export const Message = (props) => {
-	const type = props.type || "info";
-	const icon = props.icon || iconLookup(type);
+export const SideBar = (props) => {
 	return (
 		<div
-			className={cx(styles.root, props.className)}
-			data-type={type}
-			role="alert"
+			className={cx(
+				styles.root,
+				props.expandable && styles.expandable,
+				props.className
+			)}
 		>
-			<div className={styles.gutter}>
-				<div className={styles.icon}>{icon}</div>
+			<div className={styles.expander}>
+				<button onClick={props.onExpand}>
+					<Menu />
+				</button>
+			</div>
+			<div className={cx(styles.logo, props.logoSelected && styles.selected)}>
+				<button onClick={props.onLogo}>{props.logo || <Logo />}</button>
 			</div>
 			<div className={styles.content}>{props.children}</div>
+			<div
+				className={cx(styles.avatar, props.avatarSelected && styles.selected)}
+			>
+				<button onClick={props.onAvatar}>{props.avatar}</button>
+			</div>
 		</div>
 	);
 };
-
-// helper function returns the icon by type.
-function iconLookup(name: string) {
-	switch (name) {
-		case "info":
-			return <Info />;
-		case "success":
-			return <Success />;
-		case "warning":
-		case "warn":
-			return <Warn />;
-		case "danger":
-		case "error":
-		case "alert":
-		default:
-			return <Danger />;
-	}
-}

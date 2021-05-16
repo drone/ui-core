@@ -16,6 +16,7 @@
 
 import React, { useRef } from "react";
 import { Input } from "../../components/input/Input";
+import { Message } from "../../components/message/Message";
 import Harness from "../../assets/logos/HarnessLarge";
 
 // @ts-ignore
@@ -45,6 +46,11 @@ export const LoginFragment = (props) => {
 			<h2>
 				Sign in <small>And Get Ship Done</small>
 			</h2>
+			{props.error ? (
+				<Message type="error" className={styles.alert}>
+					{props.error}
+				</Message>
+			) : undefined}
 			<div>
 				<Input
 					ref={usernameElem}

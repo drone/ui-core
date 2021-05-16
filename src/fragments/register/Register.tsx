@@ -34,51 +34,49 @@ export const RegisterFragment = (props) => {
 		}
 	};
 	return (
-		<>
-			<div className={styles.root}>
-				<button className={styles.signin} onClick={props.onLogin}>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						strokeWidth="2"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-					>
-						<line x1="19" y1="12" x2="5" y2="12"></line>
-						<polyline points="12 19 5 12 12 5"></polyline>
-					</svg>
-					Sign in
-				</button>
-				<button className={styles.logo} onClick={props.onLogo} alt="logo">
-					<Harness />
-				</button>
-				<h2>
-					Sign up for an account <small>and Get Ship Done</small>
-				</h2>
-				<div>
-					<Input
-						ref={usernameElem}
-						type="text"
-						name="username"
-						placeholder="Email"
-					/>
-				</div>
-				<div>
-					<Input
-						ref={passwordElem}
-						type="password"
-						name="password"
-						placeholder="Password"
-					/>
-				</div>
-				<button className={styles.register} onClick={handleRegister}>
-					Register
-				</button>
+		<div className={styles.root}>
+			<button className={styles.signin} onClick={props.onLogin}>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+				>
+					<line x1="19" y1="12" x2="5" y2="12"></line>
+					<polyline points="12 19 5 12 12 5"></polyline>
+				</svg>
+				Sign in
+			</button>
+			<button className={styles.logo} onClick={props.onLogo} alt="logo">
+				<Harness />
+			</button>
+			<h2>
+				Sign up for an account <small>and Get Ship Done</small>
+			</h2>
+			<div>
+				<Input
+					ref={usernameElem}
+					type="text"
+					name="username"
+					placeholder="Email"
+				/>
 			</div>
-		</>
+			<div>
+				<Input
+					ref={passwordElem}
+					type="password"
+					name="password"
+					placeholder="Password"
+				/>
+			</div>
+			<button className={styles.register} onClick={handleRegister}>
+				Register
+			</button>
+		</div>
 	);
 };

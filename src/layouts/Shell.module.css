@@ -1,7 +1,8 @@
 .root {
 	display: grid;
-	grid-template-columns: 64px 250px 1fr 64px;
-	grid-template-areas: "navbar drawer content sidebar";
+	grid-template-columns: 76px 250px 1fr 64px;
+	grid-template-areas: "navbar drawer content utilitybar";
+	background: var(--harness-gray-50);
 
 	height: 100vh;
 	width: 100vw;
@@ -22,11 +23,12 @@
 	outline: none;
 	margin: 0px;
 	padding: 0px;
-	min-height: 32px;
+	min-height: 36px;
+	min-width: 36px;
 
 	svg {
-		width: 32px;
-		height: 32px;
+		width: 36px;
+		height: 36px;
 	}
 }
 
@@ -58,6 +60,49 @@
 	@media only screen and (max-width: 800px) {
 		display: none;
 	}
+
+	ul {
+		list-style: none;
+		padding: 22px 0px;
+		margin: 0px;
+	}
+
+	li {
+		list-style: none;
+		margin: 0px;
+		margin-bottom: 10px;
+		padding: 0px;
+	}
+
+	a {
+		display: block;
+		margin: 0px;
+		margin-left: 20px;
+		padding: 6px 10px;
+		text-decoration: none;
+		color: #c6cace;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 22px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+
+		&:hover {
+			color: #fff;
+		}
+
+		&[data-active="true"],
+		&[data-selected="true"] {
+			background: #028fbf;
+			color: #fff;
+		}
+	}
+
+	hr {
+		border: none;
+		background: rgba(255, 255, 255, 0.1);
+		height: 1px;
+	}
 }
 
 .drawerExpanded {
@@ -70,13 +115,8 @@
 	grid-area: content;
 }
 
-.sidebar {
-	grid-area: sidebar;
-
-	background: var(--harness-gray-50);
-	border-left: 1px solid rgba(0, 0, 0, 0.1);
-	padding: 22px 0;
-
+.utilitybar {
+	grid-area: utilitybar;
 	@media only screen and (max-width: 800px) {
 		display: none;
 	}
@@ -105,4 +145,13 @@
 	@media only screen and (max-width: 800px) {
 		display: block;
 	}
+}
+
+.nodrawer .expand {
+	display: none !important;
+}
+
+.nodrawer {
+	grid-template-columns: 76px 1fr 64px;
+	grid-template-areas: "navbar content utilitybar";
 }
