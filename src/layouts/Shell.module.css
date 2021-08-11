@@ -95,6 +95,11 @@
 		&[data-selected="true"] {
 			background: #028fbf;
 			color: #fff;
+
+			@media only screen and (max-width: 800px) {
+				margin-right: 20px;
+				border-radius: 3px;
+			}
 		}
 	}
 
