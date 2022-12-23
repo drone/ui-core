@@ -1,6 +1,9 @@
 kind: pipeline
-type: docker
+type: vm
 name: default
+
+pool:
+  use: ubuntu
 
 steps:
 - name: build
@@ -24,4 +27,3 @@ steps:
     - push
     branch:
     - master
-
